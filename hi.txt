@@ -1,0 +1,1 @@
+Dette er en masterfolder for alle JS oppgavene jeg har
