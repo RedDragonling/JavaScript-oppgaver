@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hei jeg er en H1 tag!</h1>
+  <h2>Hei jeg er en H2, jeg er litt mindre</h2>
+  <h3>Hei jeg er en H3, jeg er enda mindre!</h3>
+  <h4>Hei jeg er en H4, jeg er minst.</h4>
+  <p>Trykk på knappene for å endre fargene våre!</p>
+  <button onclick="changeColor('h1', 'green')">H1</button>
+  <button onclick="changeColor('h2', 'red')">H2</button>
+  <button onclick="changeColor('h3', 'blue')">H3</button>
+  <button onclick="changeColor('h4', 'cyan')">H4</button>
+  <script>
+    function changeColor(element, color) {
+      document.querySelector(element).style.color = color;
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>En smart tittel</h1>
+  <p>Dette er litt tekst. Oppgaven er å lage en nettside med tekst, et bilde, og noen knapper som kan endre på bildet.</p>
+  <img src="src/ivy.png" alt="" style="height: 300px; width: 300px; object-fit: cover;" id="imageSource">
+  <button onclick="changeImage('src/ivy.png')">Bilde 1</button>
+  <button onclick="changeImage('src/luxor.png')">Bilde 2</button>
+  <button onclick="changeImage('src/catman.png')">Bilde 3</button>
+  <script>
+    const imageSource = document.getElementById("imageSource");
+    function changeImage(imgsrc){
+      imageSource.src = imgsrc;
+    };
+  </script>
+</body>
+</html>

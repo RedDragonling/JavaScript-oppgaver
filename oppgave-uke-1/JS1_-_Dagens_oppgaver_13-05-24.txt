@@ -1,0 +1,57 @@
+Dagens arbeid: 
+I dag skal vi bare bli vant til å se og skrive litt JavaScript. Det forventes ikke at dere skjønner så mye foreløpig, da nesten alt er helt nytt! 
+
+Begynn med å skrive inn de ulike eksemplene, for å få en følelse av hvordan ting henger sammen. 
+
+Som med CSS, kan en i praksis finne JavaScript 3 ulike steder
+
+	1) - inline inne i et element (<tag>) , feks <button onclick="...."
+	2) - inne i et script (<script>) inne i html-dokumentet
+	3) - i en egen fil med filtype .js (eks. minFil.js)
+
+I begynnelsen kan det være lettest å bruke js inne i html-filen (1 & 2), men vi vil etterhvert begynne å skrive JS i en egen fil (som når vi skriver CSS i egen styles.css fil).
+
+-------------------------------------------------------------------
+
+Oppgave 1
+
+Øv på å opprette variabler. Bruk nøkkelordene 'const' og 'let' for å opprette litt ulike variabler.
+Øv på å finne gode variablenavn, som gir mening både for deg, men også andre som kommer til å lese koden din. Variabelnavn som 'minVariabel' virker, men sier ingenting om hva variabelen kommer til å inneholde (verdien). Navn som 'startTid', 'alder', 'ukedag' sier litt om hvilke verdier en kan forvente at variabelen kan inneholde.
+
+Opprett 5 variabler, og sett verdien til ulike tall. Heltall, og desimaltall. Husk at vi må bruke . (punktom) som desimaltegn, ikke , (komma). 
+
+Foreta beregninger med disse variablene, som plussing og ganging, og skriv svarte ut til console.
+Eksempelvis 
+
+	console.log(a * b) 
+
+der du har laget to variabler som heter a og b, og gitt disse hver sin verdi.
+
+Oppgave 2
+Lag et program som spør brukeren om å taste inn navn og en favorittfarge i to inputbokser (prompt). Dersom navnet er Per og fargen er blå, skal programmet skrive ut (vise på skjermen) teksten "Hei, Per, liker du blå-farge du?”. Dersom det er Lise som skriver inn grønn, skal programmet skrive ut teksten ”Hei, Lise, liker du grønn-farge du?” og så videre. Bruk en meldingsboks til
+å vise informasjonen.
+
+PS: Vi skal se mer på hvordan vi legger sammen hardkodet tekst med variabler, senere.
+Tips:
+Prinsippet er å ta tekststrengen vi ænsker å skrive, og så putte inn variablel-verdiene der vi ønsker de: Eks: 
+
+"Mitt navn er, " + navnevariabel + "Jeg liker best" + fargevariabel + "-farger" 
+
+Oppgave 3
+Lag et program som henter fornavn, mellomnavn og etternavn fra tre tekstfelter, og skriver ut
+hele navnet i en <div> når en knapp trykkes. Forklaring: Dersom den som bruker programmet (brukeren) skriver inn ”Sven” i fornavn-feltet, ”Karsten” i mellomnavn-feltet og ”Monsen” i etternavn-feltet, så skal <div> vise hele navnet ”Sven Karsten Monsen” når knappen trykkes. Hvis navnet ”Kari” og ”Lise” og ”Persen” skrives inn, så skal ”Kari Lise Persen” vises. Prøv å få til riktig mellomrom uten at du krever at brukeren må skrive inn noe mellomrom.
+
+Oppgave 4
+Lag en nettside med en overskrift <h1>, litt tekst, et bilde og 3 knapper. Lag det slik at når en klikker på en knapp, så byttes bildet ut med et annet. (3knapper -> 3 ulike bilder. Tenk src="...") 
+
+
+Oppgave 5
+Lag en nettside med 4 ulike <h>-tager. Sett inn 4 knapper ( <buttons> ) som skifter farge på hver sin <h>-tag når du klikker på den.
+(Tips: .style= ....)?  
+
+Oppgave 6
+Utfordring: Ekko-oppgave. Lag et program som gjentar (i en <div>) nøyaktig det som skrives inn i
+en tekstboks, i samme øyeblikk som det skrives inn. Denne oppgaven er litt vanskelig,
+men kan samtidig løses veldig elegant. 
+
+Tips: Les litt om <input> tekstfelt, og funksjonen oninput() ..  
