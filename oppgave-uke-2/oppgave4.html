@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 4</title>
+</head>
+<body>
+  <h1>km/h to mph</h1>
+  <input type="number" id="number-input">
+  <button onclick="convertSpeed()">Beregn</button>
+  <span id="text-output-box"></span>
+
+  <script>
+    const number = document.getElementById("number-input").value;
+    const outputBox = document.getElementById("text-output-box");
+
+    function convertSpeed() {
+      const kmToMph = number/(1609344/1000000);
+      const mphToKm = number*(1609344/1000000);
+      const stringNumbers = [`${number} km/h er lik ${kmToMph} mph!`,`${number} mph er lik ${mphToKm} km/h!`];
+      stringNumbers.forEach(element => {
+        const para = document.createElement("p")
+        para.textContent = element;
+        outputBox.appendChild(para);
+      });
+    };
+  </script>
+</body>
+</html>
+
+<!-- oppgave 4 - Lag et program som konverterer mellom km/h og mph (miles per hour)
+
+På samme måte som tidligere skriver brukeren inn et tall i et tekstfelt, og den beregnede verdien presenteres med passende ledetekst.
+
+"... km/h tilsvarer ... miles per  hour!"
+
+Dette skal skje når brukeren trykker på en knapp
+
+b) Lag et program som gjør det samme, men i motsatt rekkefølge mph -> km/h -->
