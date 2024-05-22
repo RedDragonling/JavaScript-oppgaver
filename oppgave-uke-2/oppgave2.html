@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 2</title>
+</head>
+<body>
+  <h1>Temperature converter!</h1>
+  <h3>Input your temperature</h3>
+  <input type="number">
+  <button onclick="convertTemperatures()">Beregn</button>
+  <span id="results">
+  </span>
+  <script>
+    const resultBox = document.getElementById("results");
+    function convertTemperatures(){
+      resultBox.innerHTML = "";
+      const number = document.querySelector("input").value;
+      const fahrenheitToCelsius = Math.round(((number - 32) * 5/9)*100)/100;
+      const fahrenheitToKelvin = Math.round(((number - 32) * 5/9 + 273.15)*100)/100;
+      const celsiusToFahrenheit = Math.round(((number*9/5) + 32)*100)/100;
+      const celsiusToKelvin = Math.round(((number-0) + (27315/100))*100)/100;
+      // console.log(celsiusToKelvin);
+      const tempConversionString = [`${number} grader Fahrenheit tilsvarer ${fahrenheitToCelsius} grader Celsius, og ${fahrenheitToKelvin} grader Kelvin`, `${number} grader Celsius tilsvarer ${celsiusToFahrenheit} grader Fahrenheit, og ${celsiusToKelvin} grader Kelvin`];
+      tempConversionString.forEach(element => {
+        const para = document.createElement("p")
+        para.textContent = element;
+        resultBox.appendChild(para);
+      });
+    }
+  </script>
+</body>
+</html>
+<!-- Oppgave 2 - Konvertering mellom ulike temperatur-skalaer
+
+Lag et program der brukeren skriver inn en verdi i Fahrenheit i et tekstfelt. Regn om til Celsius og Kelvin, og presenter dette for brukeren med passene ledetekst ala
+
+"35 grader Fahrenheit tilsvarer ... grader Celsius og ... grader Kelvin"
+
+T (° F) = T (° C) × 9/5 + 32
+
+
+Dette skal skje når en knapp trykkes.
+
+b) Lag et program som konverterer andre veien også ( Celsius -> Fahrenheit og Kelvin)
+T (° C) = ( T (° F) - 32) × 5/9 -->

@@ -1,0 +1,82 @@
+Oppgave 1 – Lek med tall
+Lag et program som leser det tallet (kun ett tall) som brukeren har skrevet inn i et tekstfelt. Dette skal skje når en knapp trykkes. Skriv ut til websiden hva halvparten av tallet er, hva det dobbelte av tallet er, hva det tredobbelte av tallet er, og hva tallet ganget med seg selv er. Husk å benytte forklarende tekst til hver linje som skrives ut - det skal være lett å
+lese programmet for en utenforstående.
+
+------------------------------------------------------------
+Oppgave 2 - Konvertering mellom ulike temperatur-skalaer
+
+Lag et program der brukeren skriver inn en verdi i Fahrenheit i et tekstfelt. Regn om til Celsius og Kelvin, og presenter dette for brukeren med passene ledetekst ala
+
+"35 grader Fahrenheit tilsvarer ... grader Celsius og ... grader Kelvin"
+
+T (° F) = T (° C) × 9/5 + 32
+
+
+Dette skal skje når en knapp trykkes.
+
+b) Lag et program som konverterer andre veien også ( Celsius -> Fahrenheit og Kelvin)
+T (° C) = ( T (° F) - 32) × 5/9
+--------------------------------------------------------------------
+Oppgave 3 - Sekunder til minutter og timer?
+
+Lag et program som tar inn et antall sekunder som brukeren har skrevet inn i et tekstfelt. Regn om sekundene til timer:minutter:sekunder. Presenter dette med passende ledetekst ala
+
+"3756 sekunder tilsvarer ...timer, ....minutter og ... sekunder"  
+
+Dette skal skje når en knapp trykkes.
+
+b) Prøv gjerne deretter å presentere svaret på formen "33:55:9" (timer:minutter:sekunder).
+-----------------------------------------------
+oppgave 4 - Lag et program som konverterer mellom km/h og mph (miles per hour)
+
+På samme måte som tidligere skriver brukeren inn et tall i et tekstfelt, og den beregnede verdien presenteres med passende ledetekst.
+
+"... km/h tilsvarer ... miles per  hour!"
+
+Dette skal skje når brukeren trykker på en knapp
+
+b) Lag et program som gjør det samme, men i motsatt rekkefølge mph -> km/h
+
+-------------------------------------------------------------------------------------------------
+Oppgave 5 - Lag en epost generator!
+
+Brukeren skriver inn fornavn og mellomnavn i hvert sitt tekstfelt på siden. Når brukeren trykker på en knapp, skal programmet lage en epostadresse automagisk på formen
+
+"Din epostadresse er: knut.knutsen@olsenbanden.co.uk"
+
+Alt etter @-tegnet kan du velge selv
+
+----------------------------------------------------------------------------------------------
+Oppgave 6 - BMI-kalkulator
+
+Bruker skriver inn verdier for vekt og høyde. Når brukeren trykker på en knapp skal det beregnes BMI og resultatet presenteres for brukeren.
+
+Bmi beregnes som følger:
+
+BMI = (Weight in Kilograms / (Height in Meters x Height in Meters))
+
+
+
+Utskrift kan ha formen:
+
+"Basert på din høyde ...cm og din kroppsvekt ...kg er din beregnede BMI ..."
+
+
+--------------------------------------------
+
+If - else
+
+----------------------------------------------
+
+Oppgave 6 – Pensjonister, myndige og barn
+Lag et program som ber om en alder i et tekstfelt, og skriver ut meldingen "Du er myndig" dersom personen er over 18 år, "Du er dessuten pensjonist" dersom personen også er over 67 år, og "Du er ikke myndig enda" dersom personen er under 18 år. Husk å sjekke inngangsdata. Her forventes tall, altså må du sjekke at ikke for eksempel et navn skrives inn.
+
+Utvid med 
+alder over 150 -> "Du er et mirakel!"
+alder 67 -> du er pensjonist
+alder over 18 -> du er myndig
+alder over 0 -> du er ikke myndig
+
+ellers - du er ikke født...
+
+---------------------------------------

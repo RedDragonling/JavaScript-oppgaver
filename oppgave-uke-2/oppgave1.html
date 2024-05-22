@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 1</title>
+</head>
+<body>
+  <h1>Oppgave 1</h1>
+  <input type="number" id="input-number">
+  <button onclick="regnUtTalla()">Beregn</button>
+  <div id="number-result-box"></div>
+  <script>
+    const numberValue = document.getElementById("input-number");
+    const numberResultsPath = document.getElementById("number-result-box");
+    function regnUtTalla() {
+      numberResultsPath.innerHTML = "";
+      const halfNumber = numberValue.value/2;
+      const doubleNumber = numberValue.value*2;
+      const tripleNumber = numberValue.value*3;
+      const selfduplicateNumber = numberValue.value*numberValue.value;
+      const stringNumbers = [`Ditt tall er ${numberValue.value}!`,`Halvert er tallet ${halfNumber}.`,`Ganger du det på 2 får du ${doubleNumber}.`,`Ganger du det på 3 får du ${tripleNumber}!`,`Ganget på seg selv ender du opp med ${selfduplicateNumber}!`];
+      // ForEach loop som setter inn stringsa fra arrayen :)
+      stringNumbers.forEach(element => {
+        const para = document.createElement("p")
+        para.textContent = element;
+        numberResultsPath.appendChild(para);
+      });
+    };
+  </script>
+</body>
+</html>
+<!-- Oppgave 1 – Lek med tall
+Lag et program som leser det tallet (kun ett tall) som brukeren har skrevet inn i et tekstfelt. Dette skal skje når en knapp trykkes. Skriv ut til websiden hva halvparten av tallet er, hva det dobbelte av tallet er, hva det tredobbelte av tallet er, og hva tallet ganget med seg selv er. Husk å benytte forklarende tekst til hver linje som skrives ut - det skal være lett å
+lese programmet for en utenforstående. -->
