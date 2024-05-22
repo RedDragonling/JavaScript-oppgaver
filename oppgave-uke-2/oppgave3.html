@@ -6,11 +6,35 @@
   <title>Oppgave 3</title>
 </head>
 <body>
-  <input type="text">
+  <input type="text" id="text-input">
   <button onclick="calculateTimeSpent()">Calculate</button>
-  <span id="display-time"></span>
+  <h3>Time spent writing</h3>
+  <p id="display-time"></p>
+  <p id="display-time-military"></p>
   <script>
+    const textInput = document.getElementById("text-input");
+    const displayTime = document.getElementById("display-time");
+    const displayTimeMilitary = document.getElementById("display-time-military");
 
+    let startTime, endTime, timeSpent;
+    timeSpent = 0;
+
+    textInput.addEventListener('focus', ()=>{
+      startTime = new Date().getTime();
+    });
+
+    textInput.addEventListener('blur', ()=> {
+      endTime = new Date().getTime();
+      timeSpent += (endTime - startTime) / 1000;
+      updateDisplayTime();
+    })
+    function updateDisplayTime() {
+      const hours = Math.floor(timeSpent / 3600);
+      const minutes = Math.floor((timeSpent % 3600) / 60);
+      const seconds = Math.floor(timeSpent % 60);
+      displayTime.textContent = `${hours} hours ${minutes} minutes ${seconds} seconds.`;
+      displayTimeMilitary.textContent =`${('0'+hours).slice(-2)}:${('0'+minutes).slice(-2)}:${('0'+seconds).slice(-2)}`;
+    };
   </script>
 </body>
 </html>
