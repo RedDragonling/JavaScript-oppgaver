@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="name-input">
+  <input type="text" id="surname-input">
+  <button id="get-email">Generer</button>
+  <p id="email-result"></p>
+  <script>
+    const inputName = String(document.getElementById("name-input").value);
+    const inputSurname = String(document.getElementById("surname-input").value);
+    const generatedEmail = `${inputName}.${inputSurname}@dinepost.no`;
+
+    const emailResult = document.getElementById("email-result");
+
+    const buttonEmail = document.getElementById("get-email");
+    buttonEmail.addEventListener("click", ()=>{
+      emailResult.innerHTML = (`Din epostadresse er: ${generatedEmail}`);
+    });
+  </script>
+</body>
+</html>
+<!-- Oppgave 5 - Lag en epost generator!
+
+Brukeren skriver inn fornavn og mellomnavn i hvert sitt tekstfelt på siden. Når brukeren trykker på en knapp, skal programmet lage en epostadresse automagisk på formen
+
+"Din epostadresse er: knut.knutsen@olsenbanden.co.uk"
+
+Alt etter @-tegnet kan du velge selv -->

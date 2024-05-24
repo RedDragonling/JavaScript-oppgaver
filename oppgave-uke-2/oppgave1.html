@@ -19,7 +19,13 @@
       const doubleNumber = numberValue.value*2;
       const tripleNumber = numberValue.value*3;
       const selfduplicateNumber = numberValue.value*numberValue.value;
-      const stringNumbers = [`Ditt tall er ${numberValue.value}!`,`Halvert er tallet ${halfNumber}.`,`Ganger du det på 2 får du ${doubleNumber}.`,`Ganger du det på 3 får du ${tripleNumber}!`,`Ganget på seg selv ender du opp med ${selfduplicateNumber}!`];
+      const stringNumbers = [
+        `Ditt tall er ${numberValue.value}!`,
+        `Halvert er tallet ${halfNumber}.`,
+        `Ganger du det på 2 får du ${doubleNumber}.`,
+        `Ganger du det på 3 får du ${tripleNumber}!`,
+        `Ganget på seg selv ender du opp med ${selfduplicateNumber}!`
+      ];
       // ForEach loop som setter inn stringsa fra arrayen :)
       stringNumbers.forEach(element => {
         const para = document.createElement("p")
