@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 3</title>
+</head>
+<body>
+  <input type="text" id="first-name" placeholder="first name">
+  <input type="text" id="middle-name" placeholder="middle name(optional)">
+  <input type="text" id="surname" placeholder="surname">
+  <button id="button">Generer</button>
+  <p id="output"></p>
+  <script>
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=> {
+      const firstName = String(document.getElementById("first-name").value);
+      const middleName = String(document.getElementById("middle-name").value);
+      const surname = String(document.getElementById("surname").value);
+      if (firstName == "" || surname == "") {
+        output.innerHTML = "Please provide a firstname and surname";
+      } else if (middleName == "") {
+        output.innerHTML = `${firstName}-${surname.slice(0,2)}@dinepost.no`;
+      } else {
+        output.innerHTML = `${firstName}.${middleName.slice(0,1)}.${surname}@dinepost.no`;
+      }
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 3: Epost-generator versjon 2
+
+
+
+a) Brukeren skriver inn fornavn, mellomnavn og etternavn i hvert sitt tekstfelt på siden. Når brukeren trykker på en knapp, skal programmet lage en epostadresse automagisk på formen
+
+"3 første bokstaver av fornavn" + "." + "første bokstav av mellomnavn" + "." + "etternavn" @alf.no
+
+
+
+eksempel: Ole Dole Doffen
+ 
+	"Din epostadresse er: ole.d.doffen@andeby.com"
+
+
+b) Hva om brukeren ikke har mellomnavn?!? (Tips bruk if-setning for å se om variabelen mellomnavn er tom, dvs ="").
+
+Om brukeren ikke skriver inn mellomnavn, ønsker vi at en heller skal benytte en annen "formel" for generering av epost:
+
+	"hele fornavnet" + "-" + "2 første bokstaver i etternavn" @alf.no
+
+eksempel: Donald Duck
+
+	"Din epostadresse er: donald-du@andeby.com"
+
+
+Tips: bruk String-funksjon eller indekser for å få fatt i de bokstavene du trenger fra hvert ord... -->
