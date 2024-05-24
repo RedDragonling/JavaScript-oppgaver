@@ -12,10 +12,11 @@
   <span id="text-output-box"></span>
 
   <script>
-    const number = document.getElementById("number-input").value;
     const outputBox = document.getElementById("text-output-box");
-
+    
     function convertSpeed() {
+      const number = document.getElementById("number-input").value;
+      outputBox.innerHTML = "";
       const kmToMph = number/(1609344/1000000);
       const mphToKm = number*(1609344/1000000);
       const stringNumbers = [`${number} km/h er lik ${kmToMph} mph!`,`${number} mph er lik ${mphToKm} km/h!`];
