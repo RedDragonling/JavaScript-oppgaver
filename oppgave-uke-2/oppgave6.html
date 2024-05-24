@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Vekt (kg)</h3>
+  <input type="number" id="weight">
+  <h3>Høyde (cm)</h3>
+  <input type="number" id="height">
+  <button id="button">Regn ut</button>
+  <h3>Din BMI:</h3>
+  <h3 id="BMI-results"></h3>
+  <script>
+    
+    const resultField = document.getElementById("BMI-results");
+    const button = document.getElementById("button");
+    button.addEventListener("click", ()=> {
+      const weight = Number(document.getElementById("weight").value);
+      const height = Number(document.getElementById("height").value);
+      const heightConverted = height/100;
+      const bmiFormula = weight/ (heightConverted*heightConverted);
+      resultField.innerHTML = (Math.round(bmiFormula * 100) / 100).toFixed(2);;
+    });
+  </script>
+</body>
+</html>
+<!-- Oppgave 6 - BMI-kalkulator
+
+Bruker skriver inn verdier for vekt og høyde. Når brukeren trykker på en knapp skal det beregnes BMI og resultatet presenteres for brukeren.
+
+Bmi beregnes som følger:
+
+BMI = (Weight in Kilograms / (Height in Meters x Height in Meters))
+
+
+
+Utskrift kan ha formen:
+
+"Basert på din høyde ...cm og din kroppsvekt ...kg er din beregnede BMI ..." -->
