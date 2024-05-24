@@ -6,6 +6,37 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <h3>Din alder</h3>
+  <input type="number" id="your-age">
+  <button id="button">Klikk!</button>
+  <h3 id="output"></h3>
+  <script>
+    const button = document.getElementById("button");
+    const outputField = document.getElementById("output");
+    button.addEventListener("click", ()=> {
+      const yourAge = Number(document.getElementById("your-age").value);
+      if (yourAge >= 150){
+        outputField.innerHTML = "Du er et mirakel!";
+      } else if (yourAge >= 67){
+        outputField.innerHTML = "Du er pensjonist";
+      } else if (yourAge >= 18){
+        outputField.innerHTML = "Du er myndig";
+      } else if (yourAge >= 0){
+        outputField.innerHTML = "Du er ikke myndig";
+      } else {
+        outputField.innerHTML = "Du er ikke født ennå"
+      }
+    });
+  </script>
 </body>
 </html>
+<!-- Oppgave 6 – Pensjonister, myndige og barn
+Lag et program som ber om en alder i et tekstfelt, og skriver ut meldingen "Du er myndig" dersom personen er over 18 år, "Du er dessuten pensjonist" dersom personen også er over 67 år, og "Du er ikke myndig enda" dersom personen er under 18 år. Husk å sjekke inngangsdata. Her forventes tall, altså må du sjekke at ikke for eksempel et navn skrives inn.
+
+Utvid med 
+alder over 150 -> "Du er et mirakel!"
+alder 67 -> du er pensjonist
+alder over 18 -> du er myndig
+alder over 0 -> du er ikke myndig
+
+ellers - du er ikke født... -->
