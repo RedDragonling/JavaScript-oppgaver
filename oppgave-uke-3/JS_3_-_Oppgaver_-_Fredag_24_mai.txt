@@ -1,0 +1,109 @@
+Oppgaver fredag 24 mai / mandag 27 mai
+
+Oppvarming med String-oppgave
+
+Oppgave 1)
+
+Lag et input-felt av typen tekst, som brukeren kan skrive inn noe i.
+
+Lag 3 enkle knapper under tekstboksen:
+
+"Finn lengde"	"Gjør om til store bokstaver"	"Gjør om til små bokstaver"		
+
+
+Hver av knappene skal være koblet til en egen funksjon som utfører det som knappen beskriver. 
+Du må gi et godt navn til hver funksjon, og skrive det som skal skje, når brukeren klikker på knappen.
+
+Skriv ut svaret i en <p> som du gir id="utskrift" 
+
+
+
+----------------------------------------------------------------
+
+Oppgave 2: Passordsjekker (If-setninger)
+
+Du har fått i oppdrag å lage en innloggingsdel av en nettside. 
+Den skal bestå av to tekst-felter som brukeren kan skrive inn i, og en knapp.
+
+Det ene feltet skal være av typen vanlig tekst, det andre av typen passord (slik at en kun ser *** når brukeren skriver i feltet).
+
+Om brukeren lykkes å logge seg inn med rette brukernavn og passord, skal det komme opp en melding på skjermen (inni en <div> eller <p> som vanlig) hvor det står
+
+"Velkommen! Du er logget inn som <...>." (Sett inn brukerens brukernavn i stedet for <...>)
+
+
+Om brukeren skriver feil navn/passord, skal det i stedet komme opp en melding som sier 
+
+"Brukernavn eller passord var feil!"
+
+
+Fremgangsmåte: 
+opprett 2 variabler i koden din, og sett verdien til et passord og brukernavn du forventer brukeren har registrert tildligere. 
+
+eksempel: 
+let bruker = "JohnSnow"
+let pass = "supaHhemmelige345Greier!"
+
+Bruk så en if-else setning for å avgjøre om de verdiene brukeren skriver inn i tekstfeltene, samsvarer med de verdiene du har registrert i koden.
+
+----------------------------------------------------------------------------------------------------------------
+
+Oppgave 3: Epost-generator versjon 2
+
+
+
+a) Brukeren skriver inn fornavn, mellomnavn og etternavn i hvert sitt tekstfelt på siden. Når brukeren trykker på en knapp, skal programmet lage en epostadresse automagisk på formen
+
+"3 første bokstaver av fornavn" + "." + "første bokstav av mellomnavn" + "." + "etternavn" @alf.no
+
+
+
+eksempel: Ole Dole Doffen
+ 
+	"Din epostadresse er: ole.d.doffen@andeby.com"
+
+
+b) Hva om brukeren ikke har mellomnavn?!? (Tips bruk if-setning for å se om variabelen mellomnavn er tom, dvs ="").
+
+Om brukeren ikke skriver inn mellomnavn, ønsker vi at en heller skal benytte en annen "formel" for generering av epost:
+
+	"hele fornavnet" + "-" + "2 første bokstaver i etternavn" @alf.no
+
+eksempel: Donald Duck
+
+	"Din epostadresse er: donald-du@andeby.com"
+
+
+Tips: bruk String-funksjon eller indekser for å få fatt i de bokstavene du trenger fra hvert ord...
+
+-------------------------------------------------------------------------------------------------------------------------
+Oppgave 4 - Fergebilletter – Rabatt til pensjonister og barn
+
+Lag et program som beregner kostnad på bussreiser etter følgende regler:
+
+- 50% for barn under 12 år.
+- 20% for pensjonister, dvs. folk over 67 år.
+- Ingen rabatt for de øvrige aldersgruppene.
+
+I tillegg skal prisen beregnes utfra en enhetspris per kilometer på 3,52 kroner. 
+
+Data som skal gis inn fra brukeren er alder og antall valgte kilometer, i hvert sitt tekstfelt/nummerfelt. Samt en knapp for å beregne pris. 
+
+Gi svar til brukeren på formen: 
+
+"Fergebilletten koster ... kr for en tur på ... km, for en passasjer som er ... år gammel. God tur!"
+ 
+
+-------------------------------------------------------------------------------------
+Ekstra utfordring!!: 
+om du ønsker en utfordring kan du utvide oppgaven slik at brukeren kan velge et antall passasjerer fra hver aldersgruppe - feks 2 barn, 1 voksen, og 3 pensjonister. Bruk passende inputbokser der brukeren kan skrive inn et antall av hver kategori. 
+-------------------------------------------------------------------------------------
+
+Tilleggsoppgave til :
+
+Vi ønsker alltid å sørge for at brukeren taster inn verdier som gir mening og som vi kan bruke i koden vår. Dette gjør vi ved 'validering' av input fra bruker - det vil si at vi sjekker om brukeren har skrevet inn tekst om vi ber om det, og om det er et tall om vi ber om det.
+
+Dette gjøres typisk med if-setninger
+
+eksempel: 
+	if (tekstFraBruker = "") -> gi melding "du har ikke skrevet inn noe!" (Tom tekststreng)
