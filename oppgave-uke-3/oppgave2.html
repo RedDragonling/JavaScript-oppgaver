@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 2</title>
+</head>
+<body>
+  <input type="text" name="login" id="input-username">
+  <input type="password" name="login" id="input-password">
+  <button id="login-button">Log in</button>
+  <p id="result"></p>
+  <script defer>
+    const regUsername = "Jensemann";
+    const regPassword = "123passord123";
+    const resultBox = document.getElementById("result");
+    const loginButton = document.getElementById("login-button");
+
+    loginButton.addEventListener ("click", ()=> {
+      const username = String(document.getElementById("input-username").value);
+      const password = String(document.getElementById("input-password").value);
+      if (username == regUsername && password == regPassword){
+        resultBox.innerHTML = `Velkommen! Du er logget inn som ${regUsername}`;
+      } else {
+        resultBox.innerHTML = `Brukernavn eller passord var feil!`
+      };
+    });
+  </script>
+</body>
+</html>
+
+<!-- Oppgave 2: Passordsjekker (If-setninger)
+
+Du har fått i oppdrag å lage en innloggingsdel av en nettside. 
+Den skal bestå av to tekst-felter som brukeren kan skrive inn i, og en knapp.
+
+Det ene feltet skal være av typen vanlig tekst, det andre av typen passord (slik at en kun ser *** når brukeren skriver i feltet).
+
+Om brukeren lykkes å logge seg inn med rette brukernavn og passord, skal det komme opp en melding på skjermen (inni en <div> eller <p> som vanlig) hvor det står
+
+"Velkommen! Du er logget inn som <...>." (Sett inn brukerens brukernavn i stedet for <...>)
+
+
+Om brukeren skriver feil navn/passord, skal det i stedet komme opp en melding som sier 
+
+"Brukernavn eller passord var feil!"
+
+
+Fremgangsmåte: 
+opprett 2 variabler i koden din, og sett verdien til et passord og brukernavn du forventer brukeren har registrert tildligere. 
+
+eksempel: 
+let bruker = "JohnSnow"
+let pass = "supaHhemmelige345Greier!"
+
+Bruk så en if-else setning for å avgjøre om de verdiene brukeren skriver inn i tekstfeltene, samsvarer med de verdiene du har registrert i koden. -->
