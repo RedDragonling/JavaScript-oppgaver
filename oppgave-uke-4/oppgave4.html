@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 4</title>
+  <link rel="stylesheet" href="oppgave4.css">
+</head>
+<body>
+  <div>
+    <label for="r">Red</label>
+    <input type="range" min="0" max="255" name="rgb" id="r">
+    <label for="g">Green</label>
+    <input type="range" min="0" max="255" name="rgb" id="g">
+    <label for="b">Blue</label>
+    <input type="range" min="0" max="255" name="rgb" id="b">
+    <button id="button">Endre farge</button>
+  </div>
+  <script>
+    const button = document.getElementById("button");
+    const body = document.querySelector("body");
+    button.addEventListener("click", ()=>{
+      const r = document.getElementById("r").value;
+      const g = document.getElementById("g").value;
+      const b = document.getElementById("b").value;
+      console.log(r, g, b);
+      body.style.backgroundColor = `rgb(${r},${g},${b})`;
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 4: Slider
+Lag en HTML-side med slidere for tre forskjellige farger. Sliderene skal ha verdien fra 0-255, og skal representere de 3 fargekomponentene RGB (Red, GreenBlue). Legg til en knapp, som sier bytt farge, som endrer bakgrunnsfargen til hele siden, basert på de 3 verdiene i sliderene. -->
