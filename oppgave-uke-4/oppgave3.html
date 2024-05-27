@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="oppgave3.css">
+</head>
+<body>
+  <form id="radiobuttons">
+    <input type="radio" name="choose-color" id="red" value="red">
+    <label for="red">Rød</label>
+    <input type="radio" name="choose-color" id="blue" value="blue">
+    <label for="blue">Blå</label>
+    <input type="radio" name="choose-color" id="green" value="green">
+    <label for="green">Grønn</label>
+  </form>
+  <p id="output"></p>
+  <div id="colorbox" class=""></div>
+  <script>
+    const form = document.getElementById("radiobuttons");
+    const output = document.getElementById("output");
+    const colorbox = document.getElementById("colorbox");
+    const color = ["cl-red","cl-blue","cl-green"];
+    form.addEventListener("change", ()=> {
+      const selectedRadio = form.elements["choose-color"];
+      // console.log(selectedRadio.value)
+      colorbox.classList.remove("cl-red","cl-green","cl-blue");
+      colorbox.classList.add(`cl-${selectedRadio.value}`)
+      output.innerHTML = `You have selected ${selectedRadio.value}`;
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 3: Radioknappvalg
+Lag en HTML-side med radioknapper for tre forskjellige farger. Skriv en funksjon som viser en melding når en radioknapp er valgt, for eksempel "Du valgte rød." 
+cl-red cl-blue cl-green -->

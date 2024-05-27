@@ -1,0 +1,16 @@
+#colorbox {
+  height: 50px;
+  width: 50px;
+}
+
+.cl-red {
+  background-color: red;
+}
+
+.cl-blue {
+  background-color: blue;
+}
+
+.cl-green {
+  background-color: green;
+}
