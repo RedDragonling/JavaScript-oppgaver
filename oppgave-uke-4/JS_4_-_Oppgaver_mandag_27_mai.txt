@@ -1,0 +1,25 @@
+Oppgave 1: If-setning (betingelse)
+Lag en HTML-side med en tekstinndata og en knapp. Når knappen klikkes, les teksten fra inndatafeltet og bruk en if-else-setning for å vise en melding som sier "Hei, <navn>" hvis inndatafeltet ikke er tomt; ellers vis "Vennligst skriv inn navnet ditt."
+
+Oppgave 2: Kalkulatorfunksjon
+Lag en HTML-side med to nummerinndatafelt og en rullegardinmeny for operasjoner (+, -, *, /). Skriv en JavaScript-funksjon som utfører den valgte operasjonen på de to tallene når en knapp klikkes og viser resultatet.
+
+Oppgave 3: Radioknappvalg
+Lag en HTML-side med radioknapper for tre forskjellige farger. Skriv en funksjon som viser en melding når en radioknapp er valgt, for eksempel "Du valgte rød."
+
+Oppgave 4: Slider
+Lag en HTML-side med slidere for tre forskjellige farger. Sliderene skal ha verdien fra 0-255, og skal representere de 3 fargekomponentene RGB (Red, GreenBlue). Legg til en knapp, som sier bytt farge, som endrer bakgrunnsfargen til hele siden, basert på de 3 verdiene i sliderene.
+
+Oppgave 5: Avmerkingsbokser og handleliste
+Lag en HTML-side med avmerkingsbokser for elementer på en handleliste (for eksempel melk, egg, brød). Skriv en funksjon som viser en liste over valgte elementer når en knapp klikkes.
+
+Oppgave 6: Karakterkalkulator
+Lag en HTML-side med 5 nummerinndatafelt for studentens poeng på innleveringsoppgaver, fra 1-6. Skriv en funksjon som beregner gjennomsnittspoengsummen og viser den tilsvarende karakteren (A, B, C, osv.) basert på gjennomsnittet.
+Presenter svaret på siden (<div> eller <p>) på formen: "Studenten fikk (xx.xx) i snitt. Dette tilsvarer karakteren (x)."
+
+Oppgave 7: Lønnskalkulator med Validering
+Lag en HTML-side med nummerinndatafelt for timepris og antall timer arbeidet. Skriv en funksjon som beregner lønnen, men inkluder validering for å sikre at brukeren har skrevet inn gyldige tallverdier og at timeprisen ikke er negativ. Gi passende feilmeldinger hvis tallverdiene er ugyldige.
+
+Oppgave 8: Enkel Valutaomregner
+Lag en HTML-side med et nummerinndatafelt for beløp og en rullegardinmeny for valg av valuta (f.eks. USD, EUR, NOK). Skriv en funksjon som konverterer beløpet til den valgte valutaen ved hjelp av passende valutakurser og viser resultatet. Valider at inndatafeltet inneholder et gyldig tall før omregningen.
+

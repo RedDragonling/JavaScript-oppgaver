@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="number-1">
+  <span id="math"> + </span>
+  <input type="number" id="number-2">
+  <select name="calculator" id="calculator-dropdown">
+    <option value="add">+</option>
+    <option value="subtract">-</option>
+    <option value="multiply">*</option>
+    <option value="divide">/</option>
+  </select>
+  <button id="button">Regn ut!</button>
+  <p id="output"></p>
+  <script>
+    const calcDropdown = document.getElementById("calculator-dropdown");
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    const math = document.getElementById("math");
+
+    calcDropdown.addEventListener("change", ()=> {
+      if (calcDropdown.value == "add"){
+        math.innerHTML = " + ";
+      } else if (calcDropdown.value == "subtract"){
+        math.innerHTML = " - "
+      } else if (calcDropdown.value == "multiply"){
+        math.innerHTML = " * "
+      } else if (calcDropdown.value == "divide"){
+        math.innerHTML = " / "
+      } else {
+        console.log("error")
+      }
+    })
+
+    function results(x){
+      output.innerHTML = x ;
+    };
+
+    button.addEventListener("click", ()=>{
+      const num1 = Number(document.getElementById("number-1").value);
+      const num2 = Number(document.getElementById("number-2").value);
+      let result;
+      // console.log(calcDropdown.value);
+      if (calcDropdown.value == "add"){
+        result = num1 + num2;
+        results(result);
+      } else if (calcDropdown.value == "subtract"){
+        result = num1 - num2;
+        results(result);
+      } else if (calcDropdown.value == "multiply"){
+        result = num1 * num2;
+        results(result);
+      } else if (calcDropdown.value == "divide"){
+        result = num1 / num2;
+        results(result);
+      } else {
+        console.log("Error, no valid value")
+      }
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 2: Kalkulatorfunksjon
+Lag en HTML-side med to nummerinndatafelt og en rullegardinmeny for operasjoner (+, -, *, /). Skriv en JavaScript-funksjon som utfører den valgte operasjonen på de to tallene når en knapp klikkes og viser resultatet. -->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 1</title>
+</head>
+<body>
+  <input type="text" name="input-name" id="input-name" placeholder="Navn">
+  <button id="button">Klikk</button>
+  <p id="output"></p>
+  <script>
+    const inputName = document.getElementById("input-name");
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      if (!inputName.value) {
+        output.innerHTML = `Venligst skriv inn et navn`;
+      } else {
+        output.innerHTML = `Hei ${inputName.value}!`;
+      }
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 1: If-setning (betingelse)
+Lag en HTML-side med en tekstinndata og en knapp. Når knappen klikkes, les teksten fra inndatafeltet og bruk en if-else-setning for å vise en melding som sier "Hei, <navn>" hvis inndatafeltet ikke er tomt; ellers vis "Vennligst skriv inn navnet ditt." -->
