@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 5</title>
+</head>
+<body>
+  <input type="checkbox" id="melk" name="melk" value="melk">
+  <label for="melk">Melk</label>
+  <input type="checkbox" id="egg" name="egg" value="egg">
+  <label for="egg">Egg</label>
+  <input type="checkbox" id="brød" name="brød" value="brød">
+  <label for="brød">Brød</label>
+  <input type="checkbox" id="smør" name="smør" value="smør">
+  <label for="smør">Smør</label>
+  <input type="checkbox" id="saft" name="saft" value="saft">
+  <label for="saft">Saft</label>
+  <input type="checkbox" id="yogurt" name="yogurt" value="yogurt">
+  <label for="yogurt">Yogurt</label>
+  <input type="checkbox" id="havregryn" name="havregryn" value="havregryn">
+  <label for="havregryn">Havregryn</label>
+
+  <button id="button">Lag liste</button>
+
+  <h3>Din handleliste</h3>
+  <ul id="list">
+  </ul>
+
+  <script>
+    const button = document.getElementById("button");
+    const list = document.getElementById("list");
+    
+    button.addEventListener("click", ()=> {
+      const input = document.querySelectorAll('input[type="checkbox"]');
+      console.log("Klikk")
+      list.innerHTML = "";
+      input.forEach((input) => {
+        if (input.checked){
+          // console.log(`${input.value} er selecta`)
+          const newLi = document.createElement("li");
+          newLi.textContent = input.value;
+          list.appendChild(newLi);
+        } else {
+          // console.log(`${input.value} er ikke selecta`)
+        }
+      })
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 5: Avmerkingsbokser og handleliste
+Lag en HTML-side med avmerkingsbokser for elementer på en handleliste (for eksempel melk, egg, brød). Skriv en funksjon som viser en liste over valgte elementer når en knapp klikkes. -->
