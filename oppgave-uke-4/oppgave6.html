@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 6</title>
+</head>
+<body>
+  <h3>Karakterer</h3>
+  <input type="number" name="score-1" id="score-1" min="1" max="6" placeholder="Matte">
+  <input type="number" name="score-2" id="score-2" min="1" max="6" placeholder="Norsk">
+  <input type="number" name="score-3" id="score-3" min="1" max="6" placeholder="Engelsk">
+  <input type="number" name="score-4" id="score-4" min="1" max="6" placeholder="Sammfunsfag">
+  <input type="number" name="score-5" id="score-5" min="1" max="6" placeholder="Naturfag">
+  <button id="button">Beregn</button>
+  <p id="resultat"></p>
+
+  <script>
+    const resultat = document.getElementById("resultat");
+    const button = document.getElementById("button");
+    button.addEventListener("click", ()=> {
+      const input = document.querySelectorAll('input[type="number"]');
+      const num = [];
+      input.forEach(input => {
+        num.push(Number(input.value));
+      })
+      console.log(num)
+      const average = (num[0]+num[1]+num[2]+num[3]+num[4])/5;
+
+      if (average == 6){
+        resultat.innerHTML = `Din gjennomsnittskarakter er ${average}, som tilsvarer en A! Gratulerer`;
+      } else if (average >= 5){
+        resultat.innerHTML = `Din gjennomsnittskarakter er ${average}, som tilsvarer en B`;
+      } else if (average >= 4){
+        resultat.innerHTML = `Din gjennomsnittskarakter er ${average}, som tilsvarer en C`;
+      } else if (average >= 3){
+        resultat.innerHTML = `Din gjennomsnittskarakter er ${average}, som tilsvarer en D`;
+      } else if (average >= 2){
+        resultat.innerHTML = `Din gjennomsnittskarakter er ${average}, som tilsvarer en E`;
+      } else {
+        resultat.innerHTML = `Din gjennomsnittskarakter er ${average}, som tilsvarer en F. Uffda....`;
+      }
+    })
+  </script>
+</body>
+</html>
+<!-- Oppgave 6: Karakterkalkulator
+Lag en HTML-side med 5 nummerinndatafelt for studentens poeng på innleveringsoppgaver, fra 1-6. Skriv en funksjon som beregner gjennomsnittspoengsummen og viser den tilsvarende karakteren (A, B, C, osv.) basert på gjennomsnittet.
+Presenter svaret på siden (<div> eller <p>) på formen: "Studenten fikk (xx.xx) i snitt. Dette tilsvarer karakteren (x)." -->
