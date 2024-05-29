@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="timer">Timer</label>
+    <input type="number" name="timer" id="timer" placeholder="timer" min="0">
+    <label for="timepris">Timepris</label>
+    <input type="number" name="timepris" id="timepris" placeholder="timepris" min="0">
+    <br>
+    <button id="button">Regn ut</button>
+    <br>
+    <h1>Din lønn</h1>
+    <h2><span id="resultat"></span> kr</h2>
+
+    <script>
+        const button = document.getElementById("button");
+        const results = document.getElementById("resultat");
+        button.addEventListener("click", ()=> {
+            const hour = Number(document.getElementById("timer").value);
+            const hourPrice =  Number(document.getElementById("timepris").value);
+            const calcPrice = hour * hourPrice;
+            if (calcPrice < 0){
+                console.log("Error(Negative number)")
+                // Jeg har satt minimum i input til 0, som betyr det ikke bør være en negativ output.
+            } else if ( isNaN(calcPrice) == true ){
+                console.log("Error(Not a number)")
+                // Jeg konverterer valuen til Number, det bør egentlig ikke være mulig å inputte NaN verdier.
+            } else {
+                results.innerHTML = calcPrice;
+            }
+        })
+    </script>
+</body>
+</html>
+<!-- Oppgave 7: Lønnskalkulator med Validering
+Lag en HTML-side med nummerinndatafelt for timepris og antall timer arbeidet. Skriv en funksjon som beregner lønnen, men inkluder validering for å sikre at brukeren har skrevet inn gyldige tallverdier og at timeprisen ikke er negativ. Gi passende feilmeldinger hvis tallverdiene er ugyldige. -->
+<!-- 
+    Beregn lønn (Time * Timepris)
+    Sjekk om tall er gyldige
+    Sjekk at timeprisen ikke er negativ
+ -->
