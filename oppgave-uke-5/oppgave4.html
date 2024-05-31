@@ -4,9 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="oppgave4.css">
 </head>
 <body>
-  
+  <h1>Hei!</h1>
+  <h3>Dette er en subheader. Planen er å legge til klasser på alle forskjellige elementene.</h3>
+  <p>Dette er en paragraf som sier en del ting.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi quis eligendi earum possimus sunt perferendis perspiciatis. Mollitia molestias, magnam veniam aut asperiores molestiae doloremque quis iste commodi, vel maiores.</p>
+  <h3>Oi oi enda en header</h3>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur expedita rem, assumenda dolor necessitatibus quaerat enim facere amet accusamus dolore distinctio nihil! Ad amet, suscipit culpa error voluptatem molestiae eos!</p>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quis, dolorem soluta ipsa, consequatur optio itaque adipisci sed earum cupiditate quidem. Nesciunt quas, aut voluptas est reprehenderit assumenda beatae natus?</p>
+  <h2>Stor header!</h2>
+  <h3>Oi oi oi oi oi!</h3>
+  <p>Mer tekst. Masse variasjon her asså</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit iure officia eius soluta, porro, nihil ratione repellendus minus asperiores vitae eveniet quibusdam odio, totam esse voluptatum! Assumenda, vitae asperiores.</p>
+  <h1>Stor header igjen!</h1>
+  <h2>Mindre header</h2>
+  <h3>Enda mindre header!</h3>
+  <p>Jeg liker ikke å bruke lavere enn H3</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus ex placeat ratione aut, quibusdam sapiente repudiandae incidunt sed molestiae quis facere at veniam quaerat quos mollitia. Delectus, perspiciatis expedita!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae saepe optio ullam nisi inventore dolore perspiciatis aut qui, at quam accusamus adipisci animi consequatur esse possimus dicta sed quasi.</p>
+
+  <script>
+    const headerBig = document.querySelectorAll("h1");
+    const headerMed = document.querySelectorAll("h2");
+    const headerSmall = document.querySelectorAll("h3");
+    const paragraph = document.querySelectorAll("p");
+    const body = document.querySelector("body");
+
+    headerBig[0].classList.add("class-1");
+    body.classList.add("class-5")
+
+    headerMed.forEach(element => {
+      element.classList.add("class-2")
+    })
+    headerSmall.forEach(element => {
+      element.classList.add("class-3")
+    })
+    paragraph.forEach(element => {
+      element.classList.add("class-4")
+    })
+    headerBig[1].setAttribute("id", "id-1");
+    paragraph[3].classList.remove("class-4")
+    headerSmall[1].classList.remove("class-3")
+    headerSmall[3].setAttribute("id", "id-2")
+  </script>
 </body>
 </html>
 <!-- Lag minst 5 ulike CSS klasser som styler ulike ting.

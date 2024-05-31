@@ -16,6 +16,7 @@
     const button = document.getElementById("button");
     const itemList = document.getElementById("item-list");
     const alertPar = document.getElementById("alert");
+    let textList = "";
     
     button.addEventListener("click", ()=>{
       const textInput = document.getElementById("text-input").value;
@@ -23,8 +24,9 @@
         alertPar.innerHTML = "Feltet kan ikke være tomt"
       } else {
         alertPar.innerHTML = "Vare lagt til!";
-        itemList.innerText += `${textInput}\n`
-        // Sliter med dette X_X
+        textList += (textInput +"\n");
+        itemList.textContent = textList;
+        // innerText funker ikke. textContent, innerHTML og value funker
         document.getElementById("text-input").value ="";
         document.getElementById("text-input").focus();
       }

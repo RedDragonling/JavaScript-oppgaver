@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.class-1 {
+  color: red;
+}
+
+.class-2 {
+  background-color: aqua;
+}
+
+.class-3 {
+  font-size: 1em;
+}
+
+.class-4 {
+  font-style: italic;
+}
+
+.class-5 {
+  text-align: center;
+}
+
+#id-1 {
+  color: pink;
+}
+
+#id-2 {
+  background-color: blueviolet;
+}
