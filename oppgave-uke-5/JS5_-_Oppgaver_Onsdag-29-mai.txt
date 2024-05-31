@@ -1,0 +1,68 @@
+
+------------------------------------
+Oppgave 1 innerHTML 
+
+
+Handleliste - innerHTML(!)
+
+
+
+Lag en nettside der en kan legge til varer en har tenkt å kjøpe i butikken
+
+-Legg inn en beskrivende overskrift-tag, av typen h1
+
+-Legg til et tekstfelt som brukeren kan skrive inn varenavn, bruk placeholder "Legg til vare"
+
+-Legg til en knapp som brukeren kan trykke på for å registrere ny vare i listen, med teksten "Legg til vare"
+
+-Legg til et felt (<div>? <p>? ) hvor varene som er skrevet inn listes opp
+
+
+-Prøv å få listen på formen 
+
+-Vaskepulver
+-Kartong med egg
+-.....
+-.....
+
+med en vare på hver linje (en vare/linje er da én inntasting fra bruker).
+
+-------------------------------------------------------------------------------
+
+Oppgave 2 - innerText (!) (med Template String)
+
+Litt som oppgaven over, men skriv teksten ut i et tekstfelt som brukeren IKKE kan skrive i. Og benytt .innerText i stedet for den vanlige innerHTML
+
+La brukeren skrive inn en inn liste over sine favoritt-bøker
+
+Prøv å få listen på samme form som over
+
+-------------------------------------------------------------------
+Oppgave 3
+Lag en klikke-teller!
+
+Det er et lite program som holder rede på hvor mange ganger en bruker klikker på en knapp. Skriv antallet i et stort tekstfelt.
+
+Benytt en "toggle" CSS for å bytte styling i tekstfeltet for hvert klikk, slik at brukeren ser klart at det klikkes.
+Dvs at tallet for antall klikk oppdateres, og noe ved selve tekstboksen/teksten endres, for hvert klikk.
+Tips: opprett en teller-variabel som tar vare på antall klikk, og som øker med 1 for hvert klikk...
+ 
+--------------------------------------------------------------------------------
+Oppgave 4
+Lag minst 5 ulike CSS klasser som styler ulike ting.
+Benytt JS-kode til å hekte disse klassene på ulike HTML-elementer på siden, slik at de blir stylet i følge CSS-reglene til klassen. 
+
+fyll en side med ulike HTML-elementer. 
+noen <p>'er <h1>, <h2> , <h3>  etc.. bruk flest mulig
+la noen elementer ha sn egen id, mens andre igjen kan være medlem av en klasse, og noen både klasse og id-løs
+
+Tanken er å øve på å style de ulike elementene ved å hekte på (og av) de forhåndsdefinerte CSS-klassene , på de ulike HTML-elementene vha classList.add og remove
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
