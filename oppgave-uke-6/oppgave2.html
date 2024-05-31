@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<!-- Gjett-et-tall lek!
+
+Lag et program hvor brukeren taster inn et heltall mellom 0 og 100 i et tekstfelt, og trykker på en knapp for å sjekke om det er gjettet rett.
+
+a) definer en variabel rettTall og sett verdien i kode (hard-coding).
+La brukeren gjette. Om tallet er for stort, skriv dette i et felt til brukeren, og be brukeren prøve på nytt. 
+
+	"Du gjettet på <tall>. Dette er for høyt. Prøv igjen!"
+
+
+Gjetter brukeren for lavt, skrive dette på samme måte som over.
+
+	"Du gjettet på <tall>. Dette er for lavt. Prøv igjen!"
+
+
+Om brukeren gjetter rett, skriver du dette, og en gratulasjonsmelding
+
+
+"WUHUU!! Du gjettet rett!! Tallet er <tall>!" 
+
+Hint: Her må du bruke if-setninger og sjekke om tallet brukeren skriver inn er høyere eller lavere enn det du har hardkodet i koden (feks. let rettTall = 73 )
+
+
+b) Denne kan utvides ved å trekke et TILFELDIG tall hver gang programmet kjøres. I stedet for å skrive tallet direkte i koden, kan vi få JS til å finne et tilfeldig tall ved å bruke Math biblioteket og random-funksjonen slik som dette
+
+let hemmeligTall = Math.floor(Math.random() * 101);
+
+Denne benytter den innebyggede Math-klassen som gir oss mange verktøy så vi slipper lage de selv. Som feks å lage en tilfeldig verdi. random() er en funksjon som trekker et tall mellom 0 og 1 (altså et desimal-tall). Vi ganger det derfor med 101 for å få heltall. Math.floor gjør at tallet rundes ned slik at vi blir kvitt eventuelle desimaler.
+
+c) Utvid videre og benytt det vi lærte sist om å legge til og trekke fra klasser til utskriftselementet for å style svaret som skrives ut til bruker. Benytt 2 klasser - en når brukeren vinner, og en når brukeren taper. Style bakgrunnsfarge "red" og tekstfarge til "white" om brukeren klarer å gjette riktig tall. Style bakgrunnsfarge til "green" og tekstfarge til "orange" og sett fontstørrelsen til litt større enn det som var der fra før. Legg denne stylingen i 2 klasser og kall klassene '.win' og  '.loss'. Disse skal da legges til eller trekkes fra alt ettersom brukeren gjetter rett eller feil.
+
+.classList.add() og .classList(remove)
+
+Prøv deg på alle 3 utgavene (a, b, og c) -->

@@ -1,0 +1,126 @@
+JS6 - Oppgaver
+
+
+
+1 Historiegenerator
+
+Vi skal lage en historiegenerator. Historien skal bli generert
+ved å hente verdier fra brukeren gjennom elementer på nettsiden, og så
+sette disse verdiene sammen med ulike ferdige tekststrenger for å få en komplett
+historie. 
+
+Hensikten med oppgaven er å repetere hvordan man henter ut verdier
+fra skjemaelementer, samt å se hvordan man kan bruke disse verdiene, som da har
+ulike typer data, til å bygge opp en storre tekststreng.
+
+- Lag en overskrift <h2> som ønsker velkommen til "generatoren"
+
+- legg til et tekstfelt for navn
+- legg til en nedtrekksmeny for kjønn - ala jente, gutt, kvinne, mann, gæmlis etc  
+- legg til et Nummer-felt for alder
+
+Sett det hele samme til en tekst-streng på format noe slik som:
+
+`Det var en gang en <kjonn> som het <navn>, og var født i <aar>. Denne personen er nå <x> år, og har <n> år igjen til 100-års-dagen sin!`  
+
+Hint: en kan også ha beregninger inne i en ${}. Eksempel ${100 - alder}
+---------------------------------------------------------------------
+
+2 Gjett-et-tall lek!
+
+Lag et program hvor brukeren taster inn et heltall mellom 0 og 100 i et tekstfelt, og trykker på en knapp for å sjekke om det er gjettet rett.
+
+a) definer en variabel rettTall og sett verdien i kode (hard-coding).
+La brukeren gjette. Om tallet er for stort, skriv dette i et felt til brukeren, og be brukeren prøve på nytt. 
+
+	"Du gjettet på <tall>. Dette er for høyt. Prøv igjen!"
+
+
+Gjetter brukeren for lavt, skrive dette på samme måte som over.
+
+	"Du gjettet på <tall>. Dette er for lavt. Prøv igjen!"
+
+
+Om brukeren gjetter rett, skriver du dette, og en gratulasjonsmelding
+
+
+"WUHUU!! Du gjettet rett!! Tallet er <tall>!" 
+
+Hint: Her må du bruke if-setninger og sjekke om tallet brukeren skriver inn er høyere eller lavere enn det du har hardkodet i koden (feks. let rettTall = 73 )
+
+
+b) Denne kan utvides ved å trekke et TILFELDIG tall hver gang programmet kjøres. I stedet for å skrive tallet direkte i koden, kan vi få JS til å finne et tilfeldig tall ved å bruke Math biblioteket og random-funksjonen slik som dette
+
+let hemmeligTall = Math.floor(Math.random() * 101);
+
+Denne benytter den innebyggede Math-klassen som gir oss mange verktøy så vi slipper lage de selv. Som feks å lage en tilfeldig verdi. random() er en funksjon som trekker et tall mellom 0 og 1 (altså et desimal-tall). Vi ganger det derfor med 101 for å få heltall. Math.floor gjør at tallet rundes ned slik at vi blir kvitt eventuelle desimaler.
+
+c) Utvid videre og benytt det vi lærte sist om å legge til og trekke fra klasser til utskriftselementet for å style svaret som skrives ut til bruker. Benytt 2 klasser - en når brukeren vinner, og en når brukeren taper. Style bakgrunnsfarge "red" og tekstfarge til "white" om brukeren klarer å gjette riktig tall. Style bakgrunnsfarge til "green" og tekstfarge til "orange" og sett fontstørrelsen til litt større enn det som var der fra før. Legg denne stylingen i 2 klasser og kall klassene '.win' og  '.loss'. Disse skal da legges til eller trekkes fra alt ettersom brukeren gjetter rett eller feil.
+
+.classList.add() og .classList(remove)
+
+Prøv deg på alle 3 utgavene (a, b, og c)
+
+
+---------------------------------------------------------------------------
+
+Oppgave 3 - Fergetur for hele familien!
+
+Denne oppgave er lik en tidligere oppgave, men nå skal vi legge til muligheten til å velge flere deltakere.
+
+a)
+
+-Legg til et nummerfelt for antall voksne
+-Legg til et nummerfelt for antall barn
+-Legg til et nummerfelt for antall honnør 
+
+-Legg til 2 radiobuttens så en kan velge mellom enkeltreise eller tur/retur
+Pass på å sørge for at en av radiobutton'ene er valgt ved start (sett egenskap på den ene til å være 'checked').
+
+Gi disse feltene en passende ledetekst (gjerne placeholder)
+
+-Legg til en knapp som sier 'Bestill billetter'
+Når den klikkes skal prisen beregnes.
+
+Skriv ut totalprisen for brukeren på formen
+
+"Totalprisen for <antVoksne> voksne, <antBarn> og <antHonnor> honnør, er <pris> kroner. God tur!" 
+
+
+Prisen beregnes på følgende måte:
+
+100 kr voksen
+50 kr barn
+60 kr honnør
+
+Om brukeren velger enkelreise eller tur/retur:
+NB! rabatt for tur/retur = 25% (for alle) Dvs totalpris * 0.75
+
+
+b) Sjekk at brukeren har skrevet inn noe i alle nummerfeltene. 
+Om ikke (if-setning) skriv ut en melding:
+
+	"Vennligst fyll inn alle felter"
+
+Bruk en klasse (.errorStyle) til å style utskrifts-div'en med rød bakgrunn og hvit tekst, i dette tilfellet, ellers kan den toggles (slåes) av. 
+.classList.toggle("errorStyle")
+------------------------------------------------------
+
+Oppgave 4 Pizza!!
+
+Hvem liker vel ikke pizza!
+
+Lag et program hvor brukeren kan bestille en pizza. Brukeren skal få 2 valg: 
+
+Størrelse: Stor eller Liten pizza?
+Fyll: Kylling eller vegetar
+
+Bruk radio-buttons for å velge.
+
+Presenter deretter bestillingen for brukeren ved å vise en oppsummeringstekst ala
+
+"Din bestilling av 1 <størrelse> <fyll>-pizza blir levert til deg innen 59 minutter!
+Takk for betillingen."
+
+b) utvid gjerne med flere valg, kanskje taco-fyll? Eller ulike typer bunn? Du vil merke at det fort blir VELDIG mange kombinasjoner av ulike pizza-variasjoner.
+

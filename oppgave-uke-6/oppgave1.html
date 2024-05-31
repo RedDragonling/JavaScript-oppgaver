@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Velkommen til generatoren!</h2>
+  <p>Vennligst fyll inn feltene for å få en kort fortelling :)</p>
+
+  <label for="name">Navn</label>
+  <input type="text" name="name" id="name" placeholder="Navn">
+  <label for="gender">Identitet</label>
+  <select name="gender" id="gender">
+    <option value="mann" selected>Mann</option>
+    <option value="kvinne">Kvinne</option>
+    <option value="gutt">Gutt</option>
+    <option value="jente">Jente</option>
+    <option value="person">Person</option>
+    <option value="unge">Unge</option>
+  </select>
+  <label for="number">Alder</label>
+  <input type="number" name="age" id="age" placeholder="Alder" min="0" max="100">
+  <button id="button">Generer historien!</button>
+
+  <p id="historie-output"></p>
+  <script>
+    const button = document.getElementById("button");
+    const historyOutput = document.getElementById("historie-output");
+    button.addEventListener("click", ()=> {
+      const name = document.getElementById("name").value;
+      const gender = document.getElementById("gender").value;
+      const age = document.getElementById("age").value;
+      historyOutput.innerHTML = `Det var en gang en ${gender} som het ${name}. De var født rundt ${2024-age}, og er ${age} år gammal. De har ${100-age} år igjen før de fyller 100 år!`
+    })
+  </script>
+</body>
+</html>
+<!-- Historiegenerator
+
+Vi skal lage en historiegenerator. Historien skal bli generert
+ved å hente verdier fra brukeren gjennom elementer på nettsiden, og så
+sette disse verdiene sammen med ulike ferdige tekststrenger for å få en komplett
+historie. 
+
+Hensikten med oppgaven er å repetere hvordan man henter ut verdier
+fra skjemaelementer, samt å se hvordan man kan bruke disse verdiene, som da har
+ulike typer data, til å bygge opp en storre tekststreng.
+
+- Lag en overskrift <h2> som ønsker velkommen til "generatoren"
+
+- legg til et tekstfelt for navn
+- legg til en nedtrekksmeny for kjønn - ala jente, gutt, kvinne, mann, gæmlis etc  
+- legg til et Nummer-felt for alder
+
+Sett det hele samme til en tekst-streng på format noe slik som:
+
+`Det var en gang en <kjonn> som het <navn>, og var født i <aar>. Denne personen er nå <x> år, og har <n> år igjen til 100-års-dagen sin!`  
+
+Hint: en kan også ha beregninger inne i en ${}. Eksempel ${100 - alder} -->
