@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 3</title>
+  <link rel="stylesheet" href="oppgave3.css">
 </head>
 <body>
-  
+  <div class="click-box">
+    <h3>Klikknummer: <span id="click-amount">0</span></h3>
+    <button id="button">Klikk meg!</button>
+  </div>
+  <script>
+    const button = document.getElementById("button");
+    const box = document.getElementById("click-box");
+    const clickOutput = document.getElementById("click-amount");
+    const header = document.querySelector("h3");
+    const body = document.querySelector("body");
+
+    let clicked = 0;
+    
+    function randomNumer(min, max){
+      return Math.floor(Math.random() * (max-min+1) + min);
+    };
+    
+    button.addEventListener("click", ()=>{
+      let r = randomNumer(0,255);
+      let g = randomNumer(0,255);
+      let b = randomNumer(0,255);
+      clicked++;
+      clickOutput.innerHTML = clicked;
+      header.style.color = `rgb(${r},${g},${b})`;
+      body.style.backgroundColor = `rgb(${r},${g},${b})`;
+    })
+  </script>
 </body>
 </html>
 <!-- Lag en klikke-teller!
