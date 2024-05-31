@@ -1,0 +1,14 @@
+
+ul {
+  margin: 10px;
+}
+ul.dash {
+  list-style-type: none;
+}
+ul.dash > li {
+  text-indent: -20px;
+}
+ul.dash > li:before {
+  content: "-";
+  text-indent: -20px;
+}

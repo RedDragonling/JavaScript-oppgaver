@@ -3,10 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 2</title>
 </head>
 <body>
-  
+  <h1>Bokliste</h1>
+  <input type="text" id="text-input" placeholder="Legg til vare">
+  <button id="button">Legg til bok</button>
+  <p id="alert"></p>
+  <textarea name="list" id="item-list" readonly placeholder="Bokliste"></textarea>
+  </ul>
+  <script>
+    const button = document.getElementById("button");
+    const itemList = document.getElementById("item-list");
+    const alertPar = document.getElementById("alert");
+    
+    button.addEventListener("click", ()=>{
+      const textInput = document.getElementById("text-input").value;
+      if (textInput == ""){
+        alertPar.innerHTML = "Feltet kan ikke være tomt"
+      } else {
+        alertPar.innerHTML = "Vare lagt til!";
+        itemList.innerText += `${textInput}\n`
+        // Sliter med dette X_X
+        document.getElementById("text-input").value ="";
+        document.getElementById("text-input").focus();
+      }
+    })
+  </script>
 </body>
 </html>
 <!-- Oppgave 2 - innerText (!) (med Template String)

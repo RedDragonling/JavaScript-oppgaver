@@ -3,10 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 1</title>
+  <link rel="stylesheet" href="oppgave1.css">
 </head>
 <body>
-  
+  <h1>Registrer varer du vil ha</h1>
+  <input type="text" id="text-input" placeholder="Legg til vare">
+  <button id="button">Legg til vare</button>
+  <p id="alert"></p>
+  <ul id="item-list" class="dash">
+
+  </ul>
+  <script>
+    const button = document.getElementById("button");
+    const itemList = document.getElementById("item-list");
+    const alertPar = document.getElementById("alert");
+    button.addEventListener("click", ()=>{
+      const textInput = document.getElementById("text-input").value;
+      if (textInput == ""){
+        alertPar.innerHTML = "Feltet kan ikke være tomt"
+      } else {
+        alertPar.innerHTML = "Vare lagt til!";
+        const newLi = document.createElement("li");
+        newLi.textContent = textInput;
+        itemList.appendChild(newLi);
+        document.getElementById("text-input").value ="";
+        document.getElementById("text-input").focus();
+      }
+    })
+  </script>
 </body>
 </html>
 <!-- Handleliste - innerHTML(!)
