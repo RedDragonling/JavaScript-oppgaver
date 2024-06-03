@@ -1,0 +1,11 @@
+.win {
+  background-color: greenyellow;
+  border: 1px solid green;
+  color: orange;
+  font-size: 1.2em;
+}
+
+.loss {
+  background-color: red;
+  color: white;
+}

@@ -3,12 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 2</title>
+  <link rel="stylesheet" href="oppgave2.css">
 </head>
 <body>
-  
+  <h1>Gjett tallet!</h1>
+  <h3>Tast inn et tall mellom 0 og 100.</h3>
+  <input type="number" name="guess" id="guess" min="0" max="100">
+  <button id="button">Gjett!</button>
+  <p>Antall ganger gjettet: <span id="guess-amount">0</span></p>
+  <h2 id="result-output"></h2>
+
+  <script defer>
+    const button = document.getElementById("button");
+    const resultOutput = document.getElementById("result-output");
+    const guessAmount = document.getElementById("guess-amount")
+
+    function randomNumber(min, max){
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    const randomNumberValue = randomNumber(0,100);
+
+    let guessCount = 0;
+    button.addEventListener("click", ()=> {
+      const guess = document.getElementById("guess");
+      const guessValue = Number(guess.value);
+      guessCount ++;
+      guessAmount.innerHTML = guessCount;
+      if(guessValue == randomNumberValue){
+        resultOutput.innerHTML = 
+        `Woohoo! Du rettet riktig! Tallet er ${randomNumberValue}!
+        Det tok deg ${guessCount} forsøk`;
+        resultOutput.classList.remove("loss");
+        resultOutput.classList.add("win");
+      }else if (guessValue > randomNumberValue) {
+        resultOutput.innerHTML = `Du gjettet ${guessValue}. Dette er for høyt. Prøv igjen!`
+        resultOutput.classList.remove("win");
+        resultOutput.classList.add("loss");
+      }
+      else if (guessValue < randomNumberValue) {
+        resultOutput.innerHTML = `Du gjettet ${guessValue}. Dette er for lavt. Prøv igjen!`
+        resultOutput.classList.remove("win");
+        resultOutput.classList.add("loss");
+      } else if (guessValue == "") {
+        resultOutput.innerHTML = `Vennligst skriv inn et tall!`
+      } else {
+        console.log("Error, unable to check Guess to Correct number");
+      }
+    })
+  </script>
 </body>
 </html>
+
+<!-- 
+  `Du gjettet ${guess.value}. Dette er for høyt. Prøv igjen!`
+  `Du gjettet ${guess.value}. Dette er for lavt. Prøv igjen!`
+  `Woohoo! Du rettet riktig! Tallet er ${correctNumber}`-->
 
 <!-- Gjett-et-tall lek!
 
