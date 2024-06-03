@@ -1,0 +1,57 @@
+Oppgave 1 – Tippeprogram med if - else if - else
+Lag et program som lar brukeren skrive inn tippetegnet for en fotballkamp i et tekstfelt. Skriv ut teksten "Hjemme" når ”H” skrives inn, "Uavgjort" ved ”U” og "Borte" ved ”B”. Merk: du skal bruke if-else if-else. Husk å sjekke inngangsdata. Her forventes bokstavene ”H”, ”U” eller ”B”, altså må du gi beskjed til brukeren om hva som forventes dersom noe annet skrives inn.
+
+Oppgave 2 – Tippeprogram med switch - case
+Lag samme program som i oppgave 3, men bruk nå switch-case i stedet for if-else if-else.
+
+
+Oppgave 3 – Tippeprogram store og små bokstaver
+Ta utgangspunkt i tippeprogrammet du tidligere har laget. Gjør slik at brukeren kan skrive inn både "H” og ”h”, ”U” og ”u”, ”B” og ”b”, og uavhengig av hvorvidt brukeren velger å skrive inn stor eller liten bokstav, skal riktig beskjed vises (”Hjemme”, "Uavgjort", "Borte").
+
+Oppgave 4:
+
+Oppdatert BMI-kalkulator.
+
+Brukeren skal skrive inn vekt i kg, i et tekstfelt, og høyden sin i meter, i et tekstfelt.
+Når brukeren klikker på en knapp, skal BMI'en beregnes og tallverdien presenteres. I tillegg skal det skrives ut en 
+tekst avhengig av hvilken bmi-klasse vekten tilhører:
+
+'Lett undervekt' : bmi under 18.5
+'Normalvekt' : bmi fom. 18.5 tom. 24.9
+'Lett overvekt' : bmi fom. 25 tom. 29.9
+'Fedme' : bmi fom. 30
+
+Utskrift ala "Din BMI er <bmi>. Dette klassifiseres som <bmiklasse>."
+
+-------------------------------------------------------------------
+
+Oppgave 5:
+
+Lag et program som ber brukeren skrive inn en dato på formen dd-mm i et tekstfelt.
+Programmet skal skrive om datoen til formen "Du skrev inn 12. Desember." 
+Altså skal måneden nå skrives som tekst.
+
+Tips: bruk switch case for å konvertere et tall til tekst (eks 5 -> "mai").
+Tips 2: bruk slice() for å trekke ut den delen av input-teksten en vil ha fatt i som gjelder dato og måned
+
+----------------------------------------------------------------------------------
+
+Oppgave 6 [VANSKELIG!]
+
+Skuddår!
+
+Lag et program som lar brukeren skrive inn et årstall i et tekstfelt. Når brukeren trykker på en knapp, skal programmet avgjøre om årstallet brukeren skriver inn er et skuddår. Skriv ut passende tekst til brukeren.
+
+"Skuddår:
+Skuddår er år som er delelige på 4 og som ikke er delelige med 100, med unntak for år som er delelige på 400. Årene 1700, 1800, 1900, 2100 og 2200 er altså ikke skuddår."
+
+Tips: bruk en kombinasjon av forutsetninger ved å benytte && (and) og || (or) for å kombinere betingelser.
+
+------------------------------------------------------------------------------------------------------------
+
+Kommentar:
+
+Husk å verifisere/validere det brukeren skriver inn, slik at programmet ikke krasjer, eller
+det returneres ulogiske eller meningsløse svar. Det kan være å sette egenskapen "required" i input-elementet, og sjekke de verdiene brukeren taster inn, for å se at det ikke skrives inn verdier som ikke kan benyttes.
+
+Det kan være å sjekke at brukeren faktisk skriver inn et tall, eller tekst når det forventes, eller at alle felter er fylt ut, og at det benyttes rette datatype.

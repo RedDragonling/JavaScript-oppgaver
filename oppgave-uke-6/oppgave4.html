@@ -39,17 +39,17 @@
 
     button.addEventListener("click", ()=> {
       console.log(pizzaSizePath);
-      console.log(pizzaSizePath.filter(item => item.checked))
-      // const pizzaSizeSelectedRadio = pizzaSizePath.querySelector("input[type='radio']");
-      // const pizzaSize = pizzaSizeSelectedRadio.value;
+      const sizeData = new FormData(pizzaSizePath);
+      const size = sizeData.get('size');
       
-      // const pizzaToppingSelectedRadio = pizzaToppingPath.querySelector("input[type='radio'][checked]");
-      // const pizzaTopping = pizzaToppingSelectedRadio.value;
+      const topData = new FormData(pizzaToppingPath);
+      const top = topData.get('topping');
 
       output.innerHTML =
-      `Din bestilling av en ${pizzaSize} ${pizzaTopping}-pizza vil være klar om 59 minutter!`;
+      `Din bestilling av en ${size} ${top}-pizza vil være klar om 59 minutter!`;
     })
     // JEG HAR GJORT DET LITT FOR KOMPLISERT, kom tilbake til senere!
+    // Jeg kom tilbake senere og fik løst det :)
   </script>
 </body>
 </html>
