@@ -3,10 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 4</title>
 </head>
 <body>
-  
+  <h1>Lag din pizza!</h1>
+  <form id="size-form" name="size">
+    <h3>Velg størrelse</h3>
+    <input type="radio" id="stor" value="stor" name="size">
+    <label for="stor">Stor</label>
+    <input type="radio" id="medium" value="medium" name="size">
+    <label for="medium">Medium</label>
+    <input type="radio" id="liten" value="liten" name="size">
+    <label for="liten">Liten</label>
+  </form>
+  <form id="toppings-form" name="topping">
+    <h3>Toppings</h3>
+    <input type="radio" id="pepperoni" value="pepperoni" name="topping">
+    <label for="pepperoni">Pepperoni</label>
+    <input type="radio" id="bbq-kylling" value="BBQ Kylling" name="topping">
+    <label for="bbq-kylling">BBQ kylling</label>
+    <input type="radio" id="taco" value="taco" name="topping">
+    <label for="taco">Taco</label>
+    <input type="radio" id="vegetariansk" value="vegetariansk" name="topping">
+    <label for="vegetariansk">Vegetariansk</label>
+  </form>
+  <button id="button">Bestill!</button>
+
+  <h3 id="output"></h3>
+
+  <script>
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    const pizzaSizePath = document.getElementById("size-form");
+    const pizzaToppingPath = document.getElementById("toppings-form");
+
+    button.addEventListener("click", ()=> {
+      console.log(pizzaSizePath);
+      console.log(pizzaSizePath.filter(item => item.checked))
+      // const pizzaSizeSelectedRadio = pizzaSizePath.querySelector("input[type='radio']");
+      // const pizzaSize = pizzaSizeSelectedRadio.value;
+      
+      // const pizzaToppingSelectedRadio = pizzaToppingPath.querySelector("input[type='radio'][checked]");
+      // const pizzaTopping = pizzaToppingSelectedRadio.value;
+
+      output.innerHTML =
+      `Din bestilling av en ${pizzaSize} ${pizzaTopping}-pizza vil være klar om 59 minutter!`;
+    })
+    // JEG HAR GJORT DET LITT FOR KOMPLISERT, kom tilbake til senere!
+  </script>
 </body>
 </html>
 <!-- Pizza!!
