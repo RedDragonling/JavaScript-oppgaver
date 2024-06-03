@@ -34,7 +34,7 @@
       if(guessValue == randomNumberValue){
         resultOutput.innerHTML = 
         `Woohoo! Du rettet riktig! Tallet er ${randomNumberValue}!
-        Det tok deg ${guessCount} forsøk`;
+        Det tok deg ${guessCount} forsøk. Last inn nettsiden på nytt for nytt tall!`;
         resultOutput.classList.remove("loss");
         resultOutput.classList.add("win");
       }else if (guessValue > randomNumberValue) {
