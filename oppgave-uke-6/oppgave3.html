@@ -3,10 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 3</title>
+  <link rel="stylesheet" href="oppgave3.css">
 </head>
 <body>
-  
+  <h1>Bestill fergetur</h1>
+  <div>
+    <h3>Antall reisende</h3>
+    <label for="adult">Voksen</label>
+    <input type="number" id="adult" min="0">
+    <label for="child">Barn</label>
+    <input type="number" id="child" min="0">
+    <label for="senior">Honnør</label>
+    <input type="number" id="senior" min="0">
+    <form action="">
+      <h3>Velg reisetype</h3>
+      <span>
+        <input type="radio" id="enkel-reise" name="reise" class="radio">
+        <label for="enkel-reise">Enkelreise</label>
+      </span>
+      <span>
+        <input type="radio" id="tur-retur" name="reise" checked class="radio">
+        <label for="tur-retur">Tur-retur</label>
+      </span>
+    </form>
+
+    <button id="button">Bestill billetter!</button>
+    <h3 id="output"></h3>
+  </div>
+  <script defer>
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=> {
+      const adultVal = Number(document.getElementById("adult").value);
+      const childVal = Number(document.getElementById("child").value);
+      const seniorVal = Number(document.getElementById("senior").value);
+
+      const adultPrice = adultVal * 100;
+      const childPrice = childVal * 50;
+      const seniorPrice = seniorVal * 60;
+
+      let priceToPay = 0;
+
+      const radioEnkel = document.getElementById("enkel-reise");
+      const radioTurret = document.getElementById("tur-retur");
+      if (typeof(adultVal) != "number" || typeof(childVal) != "number" || typeof(seniorVal) != "number"){
+        output.innerHTML = "Vennligst skriv inn valide verdier."
+        output.classList.toggle("error");
+      } else if (radioEnkel.checked) {
+        priceToPay = adultPrice + childPrice + seniorPrice;
+        output.innerHTML = `Totalprisen for en enkeltreise for ${adultVal} voksne, ${childVal} barn, og ${seniorVal} honnører er ${priceToPay} kr. God tur!`
+      } else if (radioTurret.checked) {
+        priceToPay = ((adultPrice + childPrice + seniorPrice) * 2 )*0.75;
+        output.innerHTML = `Totalprisen for tur-retur for ${adultVal} voksne, ${childVal} barn, og ${seniorVal} honnører er ${priceToPay} kr. God tur!`
+      } else {
+        output.innerHTML = `Ukjent error`
+        output.classList.toggle("error")
+      }
+    })
+    </script>
 </body>
 </html>
 <!-- Fergetur for hele familien!
