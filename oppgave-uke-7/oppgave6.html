@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 6</title>
+</head>
+<body>
+  <h1>Er dette et skuddår?</h1>
+  <input type="number" name="year" id="input" min="0" required>
+  <button>Er det skuddår?</button>
+  <h3 id="output"></h3>
+  <script>
+    const button = document.querySelector("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      const input = document.getElementById("input");
+      const inputVal = Number(input.value);
+      if (inputVal == ""){
+        output.innerHTML = "Vennligst skriv inn et valid år";
+      } else if (inputVal % 4 == 0 && inputVal % 100 != 0 || inputVal % 400 == 0){
+        output.innerHTML = `År ${input.value} er et skuddår!`;
+      } else {
+        output.innerHTML = `År ${input.value} er ikke et skuddår`;
+      }
+    });
+  </script>
+</body>
+</html>
+<!-- Skuddår!
+
+Lag et program som lar brukeren skrive inn et årstall i et tekstfelt. Når brukeren trykker på en knapp, skal programmet avgjøre om årstallet brukeren skriver inn er et skuddår. Skriv ut passende tekst til brukeren.
+
+"Skuddår:
+Skuddår er år som er delelige på 4 og som ikke er delelige med 100, med unntak for år som er delelige på 400. Årene 1700, 1800, 1900, 2100 og 2200 er altså ikke skuddår."
+
+Tips: bruk en kombinasjon av forutsetninger ved å benytte && (and) og || (or) for å kombinere betingelser.
+
+------------------------------------------------------------------------------------------------------------
+
+Kommentar:
+
+Husk å verifisere/validere det brukeren skriver inn, slik at programmet ikke krasjer, eller
+det returneres ulogiske eller meningsløse svar. Det kan være å sette egenskapen "required" i input-elementet, og sjekke de verdiene brukeren taster inn, for å se at det ikke skrives inn verdier som ikke kan benyttes.
+
+Det kan være å sjekke at brukeren faktisk skriver inn et tall, eller tekst når det forventes, eller at alle felter er fylt ut, og at det benyttes rette datatype. -->
