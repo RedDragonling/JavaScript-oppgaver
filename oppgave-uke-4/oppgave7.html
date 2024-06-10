@@ -14,7 +14,7 @@
     <button id="button">Regn ut</button>
     <br>
     <h1>Din lønn</h1>
-    <h2><span id="resultat"></span> kr</h2>
+    <h2><span id="resultat">0</span> kr</h2>
 
     <script>
         const button = document.getElementById("button");
@@ -26,7 +26,7 @@
             if (calcPrice < 0){
                 console.log("Error(Negative number)")
                 // Jeg har satt minimum i input til 0, som betyr det ikke bør være en negativ output.
-            } else if ( isNaN(calcPrice) == true ){
+            } else if ( typeof calcPrice != "number" ){
                 console.log("Error(Not a number)")
                 // Jeg konverterer valuen til Number, det bør egentlig ikke være mulig å inputte NaN verdier.
             } else {
