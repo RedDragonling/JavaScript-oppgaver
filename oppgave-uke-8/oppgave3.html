@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 3</title>
+    <link rel="stylesheet" href="oppgave3.css">
+</head>
+<body>
+    <h1>Hvor mange dager er det i måneden?</h1>
+    <label for="month">Skriv inn enn måned</label>
+    <input type="text" name="month" id="month">
+    <button id="button">Hvor mange dager?</button>
+    <p id="error"></p>
+    <h3 id="output"></h3>
+    <script>
+        const button = document.getElementById("button");
+        const output = document.getElementById("output");
+        const errorOutput = document.getElementById("error");
+        const input = document.getElementById("month");
+
+        const months = {
+            januar: 31,
+            februar: 29,
+            mars: 31,
+            april: 30,
+            mai: 31,
+            juni: 30,
+            juli: 31,
+            august: 31,
+            september: 30,
+            oktober: 31,
+            november: 30,
+            desember: 31
+        };
+
+        console.log(months.februar)
+
+        button.addEventListener("click", ()=>{
+            const inputValue = input.value.toLowerCase();
+            const dager = months[inputValue];
+            if (dager == undefined){
+                output.innerHTML = ""
+                error.innerHTML = `${inputValue} er ikke en måned`;
+                // console.log(`${inputValue} er ikke en måned`)
+            } else {
+                error.innerHTML = "";
+                const inputUppercase = inputValue[0].toUpperCase() + inputValue.substring(1);
+                output.innerHTML = `${inputUppercase} har ${dager} dager`;
+                // console.log(`${inputValue} har ${dager} dager`)
+            }
+
+            // Prøver på noe bigbrain play men får det ikke til. Object til å lagre månedenavn + dager. Tror jeg må skrive om objectsa
+        })
+    </script>
+</body>
+</html>
+<!-- Lag en nettside der man kan skrive inn navnet på en måned, og så få ut antallet dager i den valgte måneden i en paragraf når man trykker på en knapp. 
+
+Hint: Bruk gjerne switch case, på en smart måte ...
+
+" I <måned> er det <x> dager" -->
