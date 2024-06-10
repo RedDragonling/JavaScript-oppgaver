@@ -45,8 +45,8 @@
                 // console.log(`${inputValue} er ikke en måned`)
             } else {
                 error.innerHTML = "";
-                const inputUppercase = inputValue[0].toUpperCase() + inputValue.substring(1);
-                output.innerHTML = `${inputUppercase} har ${dager} dager`;
+                const month = inputValue[0].toUpperCase() + inputValue.slice(1);
+                output.innerHTML = `${month} har ${dager} dager`;
                 // console.log(`${inputValue} har ${dager} dager`)
             }
 
