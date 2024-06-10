@@ -1,0 +1,164 @@
+Oppgave 1 
+Lag en tekstboks, en knapp og en paragraf der du kan skrive inn et tall i tekstboksen og så få ut informasjon om dette tallet er et partall eller oddetall i paragrafen. 
+
+"Tallet <tall> er et partall".
+
+Tips: For å sjekke om et tall er partall, kan du benytte deg av modulusoperatoren (restdivisjon). Dersom (tall % 2 == 0), altså at vi ikke får noen rest når vi deler tallet på 2, så er det partall.
+
+-----------------------
+-----------------------
+
+Oppgave 2
+Lag to tekstbokser, en knapp og en paragraf. I paragrafen skal det skrives ut hvilket av tallene som blir skrevet inn i tekstboksene som er størst.
+
+"Tallet <tall1> er større enn tallet <tall2>"
+
+eller
+
+"Tallene <tall1> og <tall2> er like store".
+
+-------------------------
+-------------------------
+
+Oppgave 3
+Lag en nettside der man kan skrive inn navnet på en måned, og så få ut antallet dager i den valgte måneden i en paragraf når man trykker på en knapp. 
+
+Hint: Bruk gjerne switch case, på en smart måte ...
+
+" I <måned> er det <x> dager"
+
+----------------------
+----------------------
+
+Oppgave 4 - Gjennomsnittsberegning
+
+
+4a) Lag et program som lar brukeren skrive inn et tall i et input-felt.
+
+Når brukeren trykker på knappen <Regn ut gjennomsnitt> skal programemt regne ut gjennomsnittsverdien og presentere den i en div for brukeren.
+
+Tips: bruk en variabel for å holde rede på totalsummen, og en variabel for å holde rede på hvor mange tall brukeren har skrevet inn. Formelen for å finne gjennomsnitt er :
+
+
+Snitt = totalsum / antall tall
+
+
+Tips 2: Bruk gjerne .toFixed(2) på svartallet, for å begrense utskriften til 2 desimaler
+
+
+4b) Utvidelse:
+
+legg til et tekstfelt som også skriver ut de enkelte tallene som brukeren skriver inn. Eks:
+
+
+Du har skrevet inn tallene
+
+2
+6
+90
+34
+45
+56
+
+
+Gjennomsnittet er: xx,xx
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+Oppgave 5 - Konstruere html-elementer i JS-kode
+
+
+Du har fått en liste (tabell) med data, som du skal presentere på en nettside:
+ 
+personer = ["Ole", "Dole", "Doffen", "Donald", "Dolly"];
+
+
+(Tips: Husk du får fatt i det første navnet i tabellen slik: person[0] 
+Det andre: person[1]  og så videre ...)
+
+- legg til <h2> med overskrift: "Beboere i Andeby"
+
+- legg til <button> "Opprett liste med innbyggere"
+
+- Legg til utskrift ala:
+
+
+Beboere i Andeby
+
+1: Ole
+2: Dole
+3: Doffen
+4: Donald
+5: Dolly
+
+lag en <ol> med en <li> for hvert av personnavnene i tabellen. Konstruere én lang tekststreng som inneholder alle de ulike elementene, samt navnene på personene. Til slutt sendes denne tekststrengen til en passende <div> på nettsiden der den vises for brukeren.
+
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+Oppgave 6 -  
+ 
+lag en <table> på samme måte som over, med nummer i første kolonne, og personnavnene i annen kolonne.
+
+Bruk metoden der en oppretter egne elementer som variabler og hekter de sammen ved å benytte .appendChild() metoden som vist i eksemplene i leksjonsnotatet.
+
+Innbygger		Navn
+
+	1		Ole
+	2		Dole
+	3		Doffen
+	4		Donald
+	5		Dolly
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+Oppgave 7 - Rundetider
+
+
+7a)
+
+- legg til <h2> med overskrift: "Rundetider for løp på bane"
+
+- legg til <button> "Legg til ny rundetid"
+
+- Legg til utskrift ala:
+
+
+Rundetider
+--------------
+
+Tider:
+1.	15:6:16
+2.	15:6:43
+3.	15:7:1
+.
+.
+. osv...
+
+
+Benytt det innebyggede Date-objektet til å hente system-tiden (fra PC'en) hver gang det klikkes "legg til ny runde".
+
+
+7b)
+
+Ekstra utfordring:
+I stedet for å bare skrive selve tidspunktet for 'klikket', prøv å beregne selve rundetiden (differansen mellom de to tidspunktene).
+
+Noe slikt:
+
+Rundetider
+-------------
+
+Runder:
+
+1.	0:0:17
+2.	0:0:18
+.
+.
+. osv...
+
+
+-----------------------------------------------
