@@ -1,0 +1,54 @@
+Felles for alle oppgaver: Opprett tekstbokser for all inputverdier, og legg til en knapp som kjører funksjonen ved onclick, som tidligere. Presenter svaret i en div slik vi har vært vant til.
+
+NB! Gi god informasjon til brukeren (overskrift og ledetekst) slik at brukeren skjønner hva som skal gjøres og hva oppgaven skal hjelpe til med.
+ 
+
+
+Oppgave 1 - Tenåring i huset?
+
+Lag en funksjon som returnerer teksten "Du er en unge" hvis alder er under 13, "Du er tenåring" hvis alder er mellom 13 og 19 år, "Du er voksen" hvis alder er 20-66, og "Du er pensjonist" hvis alder er 67 eller over. Funksjonen skal ta inn alderen (tall) som input.
+
+--------------------------------------------------------------
+
+Oppgave 2
+
+Lag en funksjon som tar inn 2 tall som input, og som returnerer det største av de to tallene.
+
+--------------------------------------------------------------
+
+Oppgave 3
+
+Lag en funksjon som returnerer arealet til et rektangel. Funksjonen skal ta inn verdier for lengde og bredde. Benytt formelen areal = lengde * bredde
+
+--------------------------------------------------------------
+
+Oppgave 4
+
+Lag en funksjon som returnerer arealet av en sirkel. funksjonen skal ta inn verdien for radius av sirkelen. Benytte formelen Areal = PI * r^2. Verdien av PI får du fra Math-klassen som er innebygget i JacvaScript, ved å skrive Math.PI
+
+--------------------------------------------------------------
+
+Oppgave 5
+
+Lag en funksjon som returnerer volumet av en eske. Funksjonen skal ta inn verdien for høyde, lengde og bredde av esken. Benytt formelen volum = bredde * høyde * lengde
+
+--------------------------------------------------------------
+
+Oppgave 6
+Lag også en funksjon som returnerer overflaten av esken, altså arealet av alle de 6 sidene.
+
+Arealet = 2 * (lengde * bredde) + 2 * (bredde * høyde) + 2 * (lengde * høyde)     
+
+--------------------------------------------------------------
+
+Oppgave 7
+
+Lag en funksjon som tar inn fornavn, mellomnavn og etternavn, og som returnerer navnet på formen (Initialer) A. B. Christensen
+
+--------------------------------------------------------------
+
+Oppgave 8 - it's complicated … :)
+
+Lag en funksjon som beregner og returnerer prisen på å fortolle en vare. Funksjonen skal ta inn prisen i dollar, og regne om til norske kroner. Input-verdier til funksjonen skal være kjøpssummen i dollar (antall dollar), og kursen på en dollar i NOK. Om det ikke oppgis dollarkurs, skal default på 10NOK benyttes.
+
+Funksjonen skal regne om beløpet til NOK. Deretter skal det legges til et fortollingsgebyr til Posten på 249 kroner, før det til slutt legges til 25% MVA på hele beløpet. Det er dette sluttbeløpet som skal returneres.
