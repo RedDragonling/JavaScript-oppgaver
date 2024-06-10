@@ -16,19 +16,24 @@
     <script>
         const button = document.getElementById("button");
         const output = document.getElementById("output");
+        const num1 = document.getElementById("tall-1");
+        const num2 = document.getElementById("tall-2");
+
         button.addEventListener("click", ()=> {
-            const num1 = document.getElementById("tall-1");
-            const num2 = document.getElementById("tall-2");
             const numVal = [Number(num1.value), Number(num2.value)]
             console.log(numVal);
-            if (numVal[0] >= numVal[1]){
-                output.innerHTML = `Nummer 1, "${numVal[0]}", er større enn nummer 2, "${numVal[1]}"`
+            if (numVal[0] > numVal[1]){
+                output.innerHTML =
+                        `Nummer 1, "${numVal[0]}", er større enn nummer 2, "${numVal[1]}"`
             } else if(numVal[0] == numVal[1]) {
-                output.innerHTML = `Nummer 1, "${numVal[0]}", er like stor som nummer 2, "${numVal[1]}"!`;
-            } else if(numVal[0] <= numVal[1]) {
-                output.innerHTML = `Nummer 2, "${numVal[1]}", er større enn Nummer 1, "${numVal[0]}"`;
+                output.innerHTML =
+                        `Nummer 1, "${numVal[0]}", er like stor som nummer 2, "${numVal[1]}"!`;
+            } else if(numVal[0] < numVal[1]) {
+                output.innerHTML =
+                        `Nummer 2, "${numVal[1]}", er større enn Nummer 1, "${numVal[0]}"`;
             } else {
-                output.innerHTML = "Noe gikk gærent, prøv igjen."
+                output.innerHTML =
+                        "Noe gikk gærent, prøv igjen.";
             }
         })
     </script>
