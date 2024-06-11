@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 1</title>
+</head>
+<body>
+    <label for="age">Din alder</label>
+    <input type="number" name="age" id="age" min="0">
+    <button id="button">Klikk!</button>
+    <p id="output"></p>
+    <script>
+        const button = document.getElementById("button");
+        const output = document.getElementById("output");
+
+        function test(){
+            console.log("hei");
+        };
+
+        button.addEventListener("click", test)
+    </script>
+</body>
+</html>
+<!-- Lag en funksjon som returnerer teksten "Du er en unge" hvis alder er under 13, "Du er tenåring" hvis alder er mellom 13 og 19 år, "Du er voksen" hvis alder er 20-66, og "Du er pensjonist" hvis alder er 67 eller over. Funksjonen skal ta inn alderen (tall) som input.
+ -->
