@@ -6,7 +6,7 @@
     <title>Oppgave 7</title>
 </head>
 <body>
-    <h2>Rundetider for løp på bane</h2>
+    <h2>Rundetider for løp på bane oppgave 1</h2>
     <button id="button">Legg til ny rundetid</button>
     <div>
         <ol id="output">
@@ -14,10 +14,10 @@
         </ol>
     </div>
     <script>
+    {
         const button = document.getElementById("button");
         const output = document.getElementById("output");
-        
-        
+
         button.addEventListener("click", () => {
             const time = new Date();
             console.log(time.getHours(), time.getMinutes(), time.getSeconds())
@@ -25,8 +25,42 @@
             newLi.textContent = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
             output.appendChild(newLi);
         });
+// Gir tider i form av time : minutt : sekund, og legger det til som en list item. 
+    }
+    </script>
+    <hr>
+    <h2>Rundetider for løp på bane oppgave 2</h2>
+    <button id="button2">Legg til ny rundetid</button>
+    <div>
+        <ol id="output2">
 
-        // Gir tider i form av time : minutt : sekund, og legger det til som en list item. 
+        </ol>
+    </div>
+    <script>
+        {
+        const button = document.getElementById("button2");
+        const output = document.getElementById("output2");
+        const newTime = new Date();
+        let oldTimes = [newTime.getHours(), newTime.getMinutes(), newTime.getSeconds()];
+        
+        button.addEventListener("click", () => {
+            const time = new Date();
+            
+            console.log(time.getHours(), time.getMinutes(), time.getSeconds())
+            const currentTime = [
+                time.getHours() - oldTimes[0],
+                time.getMinutes() - oldTimes[1],
+                time.getSeconds() - oldTimes[2]
+            ];
+            const newLi = document.createElement("li");
+            newLi.textContent = `${currentTime[0]}:${currentTime[1]}:${currentTime[2]}`;
+            output.appendChild(newLi);
+
+            oldTimes = [time.getHours(), time.getMinutes(), time.getSeconds()];
+        });
+        // Det funker ikke men det funker *nesten*
+        // Jeg tror jeg kan evt lage en funksjon som konverterer timer og minutter inn i sekunder, og konverterer det tilbake til riktig minutter og sekunder X_X
+    }
     </script>
 </body>
 </html>
