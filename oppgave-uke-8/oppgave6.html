@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 6</title>
+</head>
+<body>
+    <h1>Beboere i Andeby</h1>
+    <button id="button">Opprett tabell med inbyggere</button>
+    <div id="output"></div>
+    <script>
+        const button = document.getElementById("button");
+        const output = document.getElementById("output");
+        const personer = ["Ole", "Dole", "Doffen", "Donald", "Dolly"];
+
+        
+        button.addEventListener("click", () => {
+            output.innerHTML = "";
+            const newTable = document.createElement("table");
+            output.appendChild(newTable);
+            personer.forEach((person, nummer) => {
+                const newTr = document.createElement("tr");
+                const newTdNum = document.createElement("td");
+                const newTdName = document.createElement("td");
+                newTdNum.textContent = nummer + 1;
+                newTdName.textContent = person;
+                newTr.appendChild(newTdNum);
+                newTr.appendChild(newTdName);
+                newTable.appendChild(newTr);
+            })
+        });
+    </script>
+</body>
+</html>
+<!-- lag en <table> på samme måte som over, med nummer i første kolonne, og personnavnene i annen kolonne.
+
+Bruk metoden der en oppretter egne elementer som variabler og hekter de sammen ved å benytte .appendChild() metoden som vist i eksemplene i leksjonsnotatet.
+
+Innbygger		Navn
+
+	1		Ole
+	2		Dole
+	3		Doffen
+	4		Donald
+	5		Dolly -->
+
+    <!-- <table> <tr> <td> -->
