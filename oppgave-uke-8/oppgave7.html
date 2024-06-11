@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 7</title>
+</head>
+<body>
+    <h2>Rundetider for løp på bane</h2>
+    <button id="button">Legg til ny rundetid</button>
+    <div>
+        <ol id="output">
+
+        </ol>
+    </div>
+    <script>
+        const button = document.getElementById("button");
+        const output = document.getElementById("output");
+        
+        
+        button.addEventListener("click", () => {
+            const time = new Date();
+            console.log(time.getHours(), time.getMinutes(), time.getSeconds())
+            const newLi = document.createElement("li");
+            newLi.textContent = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+            output.appendChild(newLi);
+        });
+
+        // Gir tider i form av time : minutt : sekund, og legger det til som en list item. 
+    </script>
+</body>
+</html>
+
+<!-- 7a)
+
+- legg til <h2> med overskrift: "Rundetider for løp på bane"
+
+- legg til <button> "Legg til ny rundetid"
+
+- Legg til utskrift ala:
+
+
+Rundetider
+--------------
+
+Tider:
+1.	15:6:16
+2.	15:6:43
+3.	15:7:1
+.
+.
+. osv...
+
+
+Benytt det innebyggede Date-objektet til å hente system-tiden (fra PC'en) hver gang det klikkes "legg til ny runde".
+
+
+7b)
+
+Ekstra utfordring:
+I stedet for å bare skrive selve tidspunktet for 'klikket', prøv å beregne selve rundetiden (differansen mellom de to tidspunktene).
+
+Noe slikt:
+
+Rundetider
+-------------
+
+Runder:
+
+1.	0:0:17
+2.	0:0:18
+.
+.
+. osv... -->
