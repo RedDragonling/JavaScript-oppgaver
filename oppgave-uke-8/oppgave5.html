@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 5</title>
+</head>
+<body>
+    <h1>Beboere i Andeby</h1>
+    <button id="button">Opprett liste med innbyggere</button>
+    <div id="output"></div>
+    <script>
+        const button = document.getElementById("button");
+        const output = document.getElementById("output");
+        const personer = ["Ole", "Dole", "Doffen", "Donald", "Dolly"];
+        button.addEventListener("click", ()=>{
+            let olContent = "";
+            personer.forEach(person => {
+                const liText = `<li>${person}</li>`;
+                olContent += liText;
+            })
+            
+            const olContainer = `<ol>${olContent}</ol>`;
+            output.innerHTML = olContainer;
+        })
+    </script>
+</body>
+</html>
+<!-- Du har fått en liste (tabell) med data, som du skal presentere på en nettside:
+ 
+personer = ["Ole", "Dole", "Doffen", "Donald", "Dolly"];
+
+
+(Tips: Husk du får fatt i det første navnet i tabellen slik: person[0] 
+Det andre: person[1]  og så videre ...)
+
+- legg til <h2> med overskrift: "Beboere i Andeby"
+
+- legg til <button> "Opprett liste med innbyggere"
+
+- Legg til utskrift ala:
+
+
+Beboere i Andeby
+
+1: Ole
+2: Dole
+3: Doffen
+4: Donald
+5: Dolly
+
+lag en <ol> med en <li> for hvert av personnavnene i tabellen. Konstruere én lang tekststreng som inneholder alle de ulike elementene, samt navnene på personene. Til slutt sendes denne tekststrengen til en passende <div> på nettsiden der den vises for brukeren. -->

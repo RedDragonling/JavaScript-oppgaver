@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 4</title>
+</head>
+<body>
+    <h1>Regn ut gjennomsnitten!</h1>
+    <label for="input-num">Skriv inn et tall</label>
+    <input type="number" name="input-num" id="input-num">
+    <button id="button-input">Regn ut</button>
+    <h3>Du har skrevet inn:</h3>
+    <div id="output"></div>
+    <h3 id="output-sum"></h3>
+    <button id="button-clear">Start på nytt</button>
+
+    <script>
+        const buttonInput = document.getElementById("button-input");
+        const buttonClear = document.getElementById("button-clear");
+        const output = document.getElementById("output");
+        const outputSum = document.getElementById("output-sum");
+        const input = document.getElementById("input-num");
+
+        
+        let totalSum = 0;
+        let count = 0;
+        
+        
+        buttonInput.addEventListener("click", ()=> {
+            const inputValue = Number(input.value);
+            totalSum = totalSum + inputValue;
+            count++;
+            // console.log(totalSum, count);
+
+            const newP = document.createElement("p");
+            newP.textContent = inputValue;
+            output.appendChild(newP);
+
+            const average = (totalSum / count).toFixed(2);
+            outputSum.innerHTML = `Gjenomsnittet på disse tallene er ${average}`;
+        });
+
+        buttonClear.addEventListener("click", ()=> {
+            totalSum = 0;
+            count = 0;
+            output.innerHTML = "";
+            outputSum.innerHTML = "";
+        })
+    </script>
+</body>
+</html>
+<!-- 4a) Lag et program som lar brukeren skrive inn et tall i et input-felt.
+
+Når brukeren trykker på knappen <Regn ut gjennomsnitt> skal programemt regne ut gjennomsnittsverdien og presentere den i en div for brukeren.
+
+Tips: bruk en variabel for å holde rede på totalsummen, og en variabel for å holde rede på hvor mange tall brukeren har skrevet inn. Formelen for å finne gjennomsnitt er :
+
+
+Snitt = totalsum / antall tall
+
+
+Tips 2: Bruk gjerne .toFixed(2) på svartallet, for å begrense utskriften til 2 desimaler
+
+
+4b) Utvidelse:
+
+legg til et tekstfelt som også skriver ut de enkelte tallene som brukeren skriver inn. Eks:
+
+
+Du har skrevet inn tallene
+
+2
+6
+90
+34
+45
+56
+
+
+Gjennomsnittet er: xx,xx -->
