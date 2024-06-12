@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 5</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Skriv ut alle tall som er delelige på 8 eller 3, fra 0 til 100</h2>
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
-    
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      output.innerHTML = "";
+      const newUl = document.createElement("ul");
+      let num;
+      for (num = 0; num <= 100; num++){
+        if (num % 8 == 0 || num % 3 == 0){
+          const newLi = document.createElement("li")
+          newLi.textContent = num;
+          newUl.appendChild(newLi);
+        }
+        }
+      output.appendChild(newUl);
+      });
   </script>
 </body>
 </html>
+<!-- 
+lag en app som skriver ut alle tall som er delelig med 8 eller 3, i intervallet [0-100] -->
