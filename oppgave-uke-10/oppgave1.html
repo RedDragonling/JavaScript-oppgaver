@@ -13,9 +13,10 @@
     const button = document.getElementById("button");
     const output = document.getElementById("output");
     button.addEventListener("click", ()=>{
+      output.innerHTML = "";
       const newUl = document.createElement("ul");
       let num;
-      for (num = 1; num <= 100; num ++){
+      for (num = 2; num <= 100; num+=2){
         const newLi = document.createElement("li")
         newLi.textContent = num;
         newUl.appendChild(newLi);

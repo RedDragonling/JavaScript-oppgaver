@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 2</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Skriv ut alle oddetall mellom 0 og 100</h2>
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
-    
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      output.innerHTML = "";
+      const newUl = document.createElement("ul");
+      let num;
+      for (num = 1; num <= 100; num += 2){
+        const newLi = document.createElement("li")
+        newLi.textContent = num;
+        newUl.appendChild(newLi);
+        }
+      output.appendChild(newUl);
+      });
   </script>
 </body>
 </html>
