@@ -3,14 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 6</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Skriv inn tekst, og velg hvor mange ganger den skal printes</h2>
+  <label for="input-text">Tekst</label>
+  <input type="text" id="input-text">
+  <label for="input-number">Tall</label>
+  <input type="number" id="input-number" min="0">
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
-    
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", () => {
+      output.innerHTML= "";
+      const inputText = document.getElementById("input-text");
+      const inputNumber = document.getElementById("input-number");
+      const textVal = inputText.value;
+      const numVal = Number(inputNumber.value);
+      let count;
+      for (count = 1; count <= numVal; count++){
+        const newP = document.createElement("p");
+        newP.textContent = textVal;
+        output.appendChild(newP);
+      };
+    })
   </script>
 </body>
 </html>
+<!-- 
+Lag to tekstbokser, en paragraf og en knapp
+Når brukeren trykker på knappen, skal teksten som er skrevet inn i den første tekstboksen skrives ut så mange ganger (linje for linje) som brukeren skrev inn som tall i den andre tekstboksen. -->
