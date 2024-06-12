@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 5</title>
+</head>
+<body>
+  <script>
+    // Gjenbruk kode fra tidligere oppgaver :)
+    const areaRectangle = (lengde, bredde) => {
+      const areal = lengde * bredde;
+      return areal;
+    };
+
+    const volumeBox = (høyde, lengde, bredde) => {
+      return høyde * areaRectangle(lengde, bredde);
+    };
+  </script>
+</body>
+</html>
+<!-- Lag en funksjon som returnerer volumet av en eske. Funksjonen skal ta inn verdien for høyde, lengde og bredde av esken. Benytt formelen volum = bredde * høyde * lengde -->

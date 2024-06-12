@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 7</title>
+</head>
+<body>
+  <script>
+    const authorName = (fornavn, mellomnavn, etternavn) => {
+      const firstLetter = fornavn.slice(0,1);
+      const midLetter = mellomnavn.slice(0,1);
+      return `${firstLetter}. ${midLetter}. ${etternavn}`;
+    }
+    console.log(authorName("John", "Dwayne", "Watson"));
+  </script>
+</body>
+</html>
+<!-- Lag en funksjon som tar inn fornavn, mellomnavn og etternavn, og som returnerer navnet på formen (Initialer) A. B. Christensen -->

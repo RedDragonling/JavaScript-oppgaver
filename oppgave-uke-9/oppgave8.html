@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 8</title>
+</head>
+<body>
+  <script>
+    const toll = (dollar, dollarToNok = 10) => {
+      const valueConverted = dollar * dollarToNok;
+      const tollFlatPrice = 249;
+      return (valueConverted + tollFlatPrice) * 1.25;
+    };
+    console.log(toll(45));
+  </script>
+</body>
+</html>
+<!-- Lag en funksjon som beregner og returnerer prisen på å fortolle en vare. Funksjonen skal ta inn prisen i dollar, og regne om til norske kroner. Input-verdier til funksjonen skal være kjøpssummen i dollar (antall dollar), og kursen på en dollar i NOK. Om det ikke oppgis dollarkurs, skal default på 10NOK benyttes.
+
+Funksjonen skal regne om beløpet til NOK. Deretter skal det legges til et fortollingsgebyr til Posten på 249 kroner, før det til slutt legges til 25% MVA på hele beløpet. Det er dette sluttbeløpet som skal returneres. -->

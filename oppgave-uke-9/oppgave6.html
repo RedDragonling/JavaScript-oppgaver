@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 6</title>
+</head>
+<body>
+  <script>
+    // Gjenbruk kode fra tidligere oppgaver :)
+    const areaRectangle = (lengde, bredde) => {
+      const areal = lengde * bredde;
+      return areal;
+    };
+
+    const surfaceAreaBox = (lengde, bredde, høyde) => {
+      return 2 * areaRectangle(lengde, bredde) + 2 * areaRectangle(bredde, høyde) + 2 * areaRectangle(lengde, høyde);
+    }
+  </script>
+  
+</body>
+</html>
+<!-- Lag også en funksjon som returnerer overflaten av esken, altså arealet av alle de 6 sidene.
+
+Arealet = 2 * (lengde * bredde) + 2 * (bredde * høyde) + 2 * (lengde * høyde)   -->
