@@ -3,14 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 7</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Gange med seg selv</h2>
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
-    
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      output.innerHTML = "";
+      const newUl = document.createElement("ul");
+      let num;
+      for (num = 0; num <= 100; num++){
+        const newLi = document.createElement("li")
+        newLi.textContent = `${num} x ${num} = ${num*num}`;
+        newUl.appendChild(newLi);
+        }
+      output.appendChild(newUl);
+      });
   </script>
 </body>
 </html>
+<!-- Lag et program som skriver ut 
+
+0 x 0 = 0
+1 x 1 = 1
+
+linje for linje. 
+Bruk alle tallene i intervallet [0-100] (tilsvarer 101 linjer). -->
