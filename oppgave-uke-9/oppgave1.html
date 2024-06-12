@@ -15,7 +15,20 @@
         const output = document.getElementById("output");
 
         function test(){
-            console.log("hei");
+          const input = document.getElementById("age");
+          console.log(input.value);
+          const age = Number(input.value);
+          if (age >= 67){
+            return "Du er pensjonist";
+          } else if (age >= 20){
+            return "Du er voksen";
+          } else if (age >= 13){
+            return "Du er en tenåring";
+          } else if (age < 13){
+            return "Du er en unge";
+          } else {
+            return "Error?";
+          }
         };
 
         button.addEventListener("click", test)
