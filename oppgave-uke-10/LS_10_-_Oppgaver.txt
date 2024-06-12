@@ -1,0 +1,68 @@
+Oppgaver - Løkker
+
+
+
+For alle oppgavene gjelder (som vi har gjort hittil);
+
+* lag en overskrift <h2> med kort tittel på hva oppgaven skal løse
+* lag en knapp som setter i gang løkken inne i en funksjon du har laget
+* skriv ut resultatet av kjøringen i en <div> slik at brukeren ser hva som skjer
+
+-----------------------------------------------------
+ 
+Oppgave 1: for-løkker - partall
+lag en app som skriver ut alle partall [0 - 100] 
+
+-----------------------------------------------------
+
+Oppgave 2: 
+lag en tilsvarende løsning som skriver ut alle oddetall [0-100]
+
+-----------------------------------------------------
+
+Oppgave 3: 
+lag en app som skriver ut alle tall som er delelig med 5 i intervallet [0-100]
+
+-----------------------------------------------------
+
+Oppgave 4:
+lag en app som skriver ut alle tall som er delelig med 5 OG er et partall, i intervallet [0-100]
+
+-----------------------------------------------------
+
+Oppgave 5:
+lag en app som skriver ut alle tall som er delelig med 8 eller 3, i intervallet [0-100]
+
+-----------------------------------------------------
+
+Opppgave 6:
+Lag to tekstbokser, en paragraf og en knapp
+Når brukeren trykker på knappen, skal teksten som er skrevet inn i den første tekstboksen skrives ut så mange ganger (linje for linje) som brukeren skrev inn som tall i den andre tekstboksen.
+
+-----------------------------------------------------
+
+Oppgave 7:
+Lag et program som skriver ut 
+
+0 x 0 = 0
+1 x 1 = 1
+
+linje for linje. 
+Bruk alle tallene i intervallet [0-100] (tilsvarer 101 linjer).
+
+-----------------------------------------------------
+
+Oppgave 8:
+Lag en app som gjøre det samme som for-løkken i eksempelet i leksjonsnotatet gjorde. Bruk while-løkke i stedet for for-løkken
+"Jeg er tall nummer x" der x varierer fra 1-7, slik som i eksempelet.
+
+-----------------------------------------------------
+
+Oppgave 9:
+Lag tilsvarende program som over, men la x variere mellom 12 og 98, og gjør det slik at kun hvert 5. tall skrives ut. Det første tallet blir da 12, det neste blir 17, men hva blir det siste...?
+
+-----------------------------------------------------
+
+Oppgave 10:
+Lag et program som skriver ut alle tall mellom et start- og et slutt-tall som brukeren skriver inn i to tekstfelt. Skriv ut alt linje for linje ved å bygge én lang tekststreng, slik vi har gjort tidligere.
+
