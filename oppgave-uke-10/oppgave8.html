@@ -3,14 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 8</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Bruk While-løkke for å printe "jeg er tall X" som varierer fra 1-7</h2>
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
-    
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      let i = 1;
+      while ( i < 8 ){
+        console.log(i)
+        const newP = document.createElement("p");
+        newP.textContent = `Jeg er tallet ${i}`;
+        output.appendChild(newP);
+        i++;
+      }
+    })
   </script>
 </body>
 </html>
+<!-- 
+Lag en app som gjøre det samme som for-løkken i eksempelet i leksjonsnotatet gjorde. Bruk while-løkke i stedet for for-løkken
+"Jeg er tall nummer x" der x varierer fra 1-7, slik som i eksempelet. -->

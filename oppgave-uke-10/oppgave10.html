@@ -3,14 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 10</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Skriv inn start og slutttall, output skal gi alle talla</h2>
+  <label for="input-number-1">Nummer 1</label>
+  <input type="number" id="input-number-1" min="0">
+  <label for="input-number-2">Nummer 2</label>
+  <input type="number" id="input-number-2" min="0">
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    const inputNum1 = document.getElementById("input-number-1");
+    const inputNum2 = document.getElementById("input-number-2");
+
+    button.addEventListener("click", () => {
+      output.innerHTML = "";
+      const numVal1 = Number(inputNum1.value);
+      const numVal2 = Number(inputNum2.value);
+      let tempval;
+      if (numVal1 > numVal2){
+        for (tempVal = numVal2; tempVal < numVal1; tempVal++){
+          const newP = document.createElement("p");
+          newP.textContent = tempVal;
+          output.appendChild(newP);
+        }
+      } else if (numVal1 < numVal2){
+        for (tempVal = numVal1; tempVal < numVal2; tempVal++){
+          const newP = document.createElement("p");
+          newP.textContent = tempVal;
+          output.appendChild(newP);
+        }
+
+      } else {
+        const newP = document.createElement("p");
+        newP.textContent = "Tallene er like store!";
+        output.appendChild(newP);
+      }
+    })
     
   </script>
 </body>
 </html>
+<!-- Lag et program som skriver ut alle tall mellom et start- og et slutt-tall som brukeren skriver inn i to tekstfelt. Skriv ut alt linje for linje ved å bygge én lang tekststreng, slik vi har gjort tidligere. -->

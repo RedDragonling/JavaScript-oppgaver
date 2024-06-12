@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 9</title>
 </head>
 <body>
-  <h2></h2>
+  <h2>Start på 12, print ut hvert 5. tall opp til 98. Siste tall blir 97</h2>
   <button id="button">Klikk</button>
   <div id="output"></div>
   <script>
-    
+    const button = document.getElementById("button");
+    const output = document.getElementById("output");
+    button.addEventListener("click", ()=>{
+      let i = 12;
+      while ( i < 98 ){
+        console.log(i)
+        const newP = document.createElement("p");
+        newP.textContent = `Jeg er tallet ${i}`;
+        output.appendChild(newP);
+        i+=5;
+      }
+    })
   </script>
 </body>
 </html>
+<!-- 
+Lag tilsvarende program som over, men la x variere mellom 12 og 98, og gjør det slik at kun hvert 5. tall skrives ut. Det første tallet blir da 12, det neste blir 17, men hva blir det siste...? -->
