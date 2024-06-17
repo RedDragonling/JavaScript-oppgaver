@@ -1,0 +1,89 @@
+Oppgave 1:
+
+Du har en array som følger: 
+
+	let tall = [34,53,2,3,34,26,26,85,3,4,98,2,12]; 
+
+Gjør følgende handlinger på arrayen i en knapps onclick-hendelse. Du velger selv hvordan du vil organisere utskriften: 
+
+a) Skriv ut arrayen. (bla gjennom med en for-løkke)
+b) Skriv ut arrayen baklengs. (samme som over, men andre veien) 
+c) Skriv ut annethvert tall i arrayen. (la telleren øke med 2 i stedet for 1 ..)
+d) Skriv ut de tallene som er mindre enn 10 i arrayen. (sjekk alle, men bruk en if-setning til å kun skrive ut de som passer beskrivelsen )
+e) Skriv ut alle partall i arrayen. ( alle tall må sjekkes, for nå vet vi ikke i hvilke indekser/plasser partallene ligger ...) 
+f) Skriv ut summen av alle tall i arrayen
+g) Kanskje du kan finne summen av eventuelle Primtall i arrayen også? Bruk gjerne samme fremgangsmåte som vi brukte under for-løkke oppgavene
+
+
+-------------------------------------------------------------------------
+
+Oppgave 2:
+
+Du har en array som er definert som følger: 
+
+	let tall = [34,53,2,-3,34,26,-26,85,3,4,98,2,-12]; 
+
+Gjør følgende handlinger på arrayen i en knapps onclick-hendelse. Du velger selv hvordan du vil organisere utskriften. 
+
+a) Finn summen av tallene i arrayen. 
+b) Finn antall negative tall i arrayen. 
+c) Finn gjennomsnittet av tallene i arrayen. 
+d) Finn minste tall i arrayen. 
+e) Finn summen av partallene i arrayen.
+
+-----------------------------------------------------------------------------
+
+Oppgave 3
+
+Du har en array med tall mellom 0 og 9, som er definert som følger: 
+
+	let tall = [4,5,2,3,4,6,1,2,0,9,7,6,8,5,6,4,2,3,4,7,3]; 
+
+a) Tell opp hvor mange ganger hvert tall mellom 0 og 9 forekommer, og lag en utskrift på dette. 
+TIPS: Bruk en egen tabell let antall = [0, 0, 0, 0, 0, 0, 0, 0, 0] som holder rede på antallet (frekvensen) av hvert siffer fra 0-9. Så antall 0'er ligger på plass 0 i den nye tabellen, antall 2'ere i indeks 2 feks
+
+Så til slutt, vil du ha en array/tabell noe som dette :
+
+[1, 1, 3, 3, 4, 2, 3, 2, 1, 1] altså 1 0-tall, 1 1-tall, 3 2-tall osv   
+
+b) Presenter utskriften med ulik farge på partall og oddetall. Det er altså selve tallet og ikke antallet forekomster som skal avgjøre fargen.
+
+Eksempel:
+
+I arrayet finner en tallet
+0: 1 gang
+1: 1 gang
+2: 3 gang
+...
+
+------------------------------------------------------------------------------
+
+Oppgave 4:
+
+Lag et brukergrensesnitt med en tekstboks, en knapp og en div. Lag så en array med antall dager i hver måned som verdier. Januar skal da være på indeks 0, februar på indeks 1 osv. I tekstboksen skal du så kunne skrive inn nummeret på en måned og få en utskrift med antall dager i denne måneden når du trykker på knappen. Du kan se bort fra skuddår i denne oppgaven.
+
+-----------------------------------------------------------------------
+Oppgave 5:
+
+Samme som oppgave 6, men lag nå 2 parallelle arrays med antall dager i hver måned som tall, i den ene array'en, og tilhørende måneder som tekst i den andre arrayen. Brukeren skal skrive inn en måned (eks "Januar") og programmet skal finne den korrekte indeksen i mnd_arrayen og så skal du benytte denne indeksen til å finne tilhørende antaall dager i den andre array'en
+
+-------------------------------------------------------------------------
+
+Oppgave 6:
+
+Lag et brukergrensesnitt med en tekstboks, en knapp og en paragraf (<p>) for utskrift. Lag så en array med heltall. Skriv til slutt programkode til knappens onclick-hendelse som sjekker om et tall du skriver i tekstboksen, finnes i arrayen eller ikke.
+
+----------------------------------------------------------------------
+
+Oppgave 7:
+
+Du har definert en array med navn på studenter som følger: 
+
+let arr = ["Hans","Ole","Nils","Olav","Per","Knut","Kari","Line","Pia"]; 
+
+Skriv kode som plukker ut tre tilfeldige navn fra denne arrayen (Tips: Math.random() ), og legger disse i en egen/ny array. Skriv deretter ut denne nye arrayen. 
+
+ekstra utfordring: sørg for at samme navn ikke blir plukket ut flere ganger...
+
+
+
