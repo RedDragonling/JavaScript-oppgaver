@@ -1,0 +1,131 @@
+Oppgave 1
+
+a) Lag et program med en while-løkke som summerer alle hele tall ( 1 + 2 + 3...). Løkken skal avsluttes når summen passerer 1238 (Hint: sum > 1238). Skriv ut det siste tallet som gjorde at løkke passerte målverdien. 
+
+b) Lag et program med en while-løkke som summerer alle PARTALL 0 + 2 + 4 + 6.... Løkken skal avsluttes når summen >= 2250. Skriv ut det partallet som gjør at summen overstiger grensen på 2250
+
+--------------------------------------------------------------
+
+Oppgave 2
+
+a) Lag et program som skriver ut den lille gangetabellen (1-10 som leksjonsnotatet). Lag en tabell, med de rette html tagsene som
+
+<table>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+
+b) Lag et program som skriver ut den store multiplikasjonstabellen (fra 10 - 19).
+
+--------------------------------------------------------------
+
+Oppgave 3
+Samme som oppgave 2, men nå med *** for verdiene langs diagonalen (1-1, 2-2, 3-3, osv)
+Tips: Continue...
+
+--------------------------------------------------------------
+
+Oppgave 4
+Under er teksten til en såkalt barne-regle. Mye av teksten gjentas. Bruk løkker for å skrive ut teksten på en enklest mulig måte
+
+"10 green bottles, hanging on a wall,
+10 green bottles, hanging on a wall,
+If 1 green bottle were to accidentally fall
+There'd be 9 green bottles, hanging on the wall
+
+9 green bottles, hanging on a wall,
+9 green bottles, hanging on a wall,
+If 1 green bottle were to accidentally fall
+There'd be 8 green bottles, hanging on the wall
+
+8 green bottles, hanging on a wall,
+8 green bottles, hanging on a wall,
+If 1 green bottle were to accidentally fall
+
+There'd be 7 green bottles, hanging on the wall
+
+... og så videre...
+
+1 green bottles, hanging on a wall,
+1 green bottles, hanging on a wall,
+If 1 green bottle were to accidentally fall
+There'd be 0 green bottles, hanging on the wall"
+
+Ekstra utfordring: 
+b) I siste verset står det '1 green bottles' altså flertalls-s- Dette er jo ikke korrekt engelsk. Klarer du å endre det slik at det settes inn flertalls-s'er kun der det skal være?
+
+c) Utvid programmet med en tekstboks slik at brukeren selv kan bestemme antallet flasker reglen skal begynne på.
+
+--------------------------------------------------------------
+
+Oppgave 5:
+
+Lag et program som finner ut om et tall er et primtall (altså kun delelig med seg selv og 1).
+Tips: Bruk løkke for å sjekke om tallet kan deles på ulike andre tall..
+
+La brukeren skrive inn tallet i en tekstboks, og skriv svaret ut til en <div>
+
+Eksempel "Tallet X er ikke et primtall"
+
+--------------------------------------------------------------
+
+Oppgave 6:
+
+Skriv ut alle tosifrede kombinasjoner av tallene 1,2,3,4,5 (slik som 11, 12, 13, 14...). 
+Tips: Bruk nestede løkker som begge løper gjennom alle tallene i intervallet 1-5
+
+--------------------------------------------------------------
+
+Oppgave 7:
+Som forrige oppgave, men utvid med enda en løkke slik at programmet skriver ut alle tresifrede kombinasjoner.
+
+--------------------------------------------------------------
+
+Oppgave 8:
+Lag et program som lar brukeren skrive inn to nummer. (feks 12 og 108). Programmet skal beregne summen av alle partall som inngår i intervallet [12, 108] og skrive det ut til websiden:
+
+"Summen av alle partall mellom <tall1> og <tall2> er <sum>"
+
+------------------------------------------------------------
+
+Oppgave 9 
+I stedet for å summere partallene i intervallet som i oppgave 9, kan du beregne summen av alle PRIMTALL i intervallet. (Du kan kanskje gjenbruke noe kode fra oppgave 7...?)
+
+---------------------------------------------------------------
+
+Oppgave 10:
+
+Lag et program som produserer følgende output (trekant) til websiden:
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 10
+
+Nope - det er IKKE lov å skrive ut 10 enkle setninger direkte. Bruke nøsting (altså to løkker der
+den ene er inne i den andre). Tricky greier!
+
+--------------------------------------------------------------
+
+Oppgave 11:
+
+Da er det på tide med den samme men opp-ned. Lag et program som produserer følgende output (trekant) til websiden:
+
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1

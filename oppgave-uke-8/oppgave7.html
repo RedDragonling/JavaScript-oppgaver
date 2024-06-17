@@ -40,11 +40,11 @@
         {
         const button = document.getElementById("button2");
         const output = document.getElementById("output2");
-        const newTime = new Date();
-        let oldTimes = [newTime.getHours(), newTime.getMinutes(), newTime.getSeconds()];
+        const newTime = Date.now();
+        let oldTimes = newTime;
         
         button.addEventListener("click", () => {
-            const time = new Date();
+            const time = Date.now();
             
             console.log(time.getHours(), time.getMinutes(), time.getSeconds())
             const currentTime = [
