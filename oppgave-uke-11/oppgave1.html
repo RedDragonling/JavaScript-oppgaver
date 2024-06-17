@@ -6,7 +6,21 @@
   <title>Oppgave 1</title>
 </head>
 <body>
-  
+  <script>
+    function whileLoop(x, y = 1238) {
+      let i = 0;
+      let sum = 0;
+      while ( sum < y ){
+        sum += i;
+        i+= x;
+      }
+      return i;
+    };
+    console.log(whileLoop(1));
+    console.log(whileLoop(2, 2250));
+    // Efficiency. Funksjonen er identisk utenom 2 tall som kan variere.
+    // Skrev om første funksjonen så den gjelder begge oppgavene :)
+  </script>
 </body>
 </html>
 <!-- 
