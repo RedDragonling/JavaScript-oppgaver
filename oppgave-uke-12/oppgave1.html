@@ -6,7 +6,39 @@
   <title>Oppgave 1</title>
 </head>
 <body>
+  <div id="output"></div>
   <script>
+    const output = document.getElementById("output");
+    let tall = [34,53,2,3,34,26,26,85,3,4,98,2,12];
+
+    const arrayOutput = () => {
+      const newDiv = document.createElement("div");
+      tall.forEach((num) => {
+        const newP = document.createElement("p");
+        newP.textContent = num;
+        newDiv.appendChild(newP);
+        console.log(num);
+      })
+      output.appendChild(newDiv);
+    }
+    // Skriver ut innholdet av arrayen i en egen Div, med hvert sitt <p> element.
+    arrayOutput();
+
+
   </script>
 </body>
 </html>
+<!-- Du har en array som følger: 
+
+	let tall = [34,53,2,3,34,26,26,85,3,4,98,2,12]; 
+
+Gjør følgende handlinger på arrayen i en knapps onclick-hendelse. Du velger selv hvordan du vil organisere utskriften: 
+
+a) Skriv ut arrayen. (bla gjennom med en for-løkke)
+b) Skriv ut arrayen baklengs. (samme som over, men andre veien) 
+c) Skriv ut annethvert tall i arrayen. (la telleren øke med 2 i stedet for 1 ..)
+d) Skriv ut de tallene som er mindre enn 10 i arrayen. (sjekk alle, men bruk en if-setning til å kun skrive ut de som passer beskrivelsen )
+e) Skriv ut alle partall i arrayen. ( alle tall må sjekkes, for nå vet vi ikke i hvilke indekser/plasser partallene ligger ...) 
+f) Skriv ut summen av alle tall i arrayen
+g) Kanskje du kan finne summen av eventuelle Primtall i arrayen også? Bruk gjerne samme fremgangsmåte som vi brukte under for-løkke oppgavene
+ -->
