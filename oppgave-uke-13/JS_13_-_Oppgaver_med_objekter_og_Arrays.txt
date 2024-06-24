@@ -1,0 +1,84 @@
+Oppgaver med objekter og Arrays
+
+
+
+Oppgave 1
+
+Lag en variabel som er et array. (På formen let mineDyr = [] )
+
+Dette arrayet skal inneholde inneholde en samling av javascript objekter. (På formen {navn: ..., aar: ...} ).
+
+
+Noe slikt som dette:
+
+let mineDyr = [
+		{ navn: "Millie Vanillie",
+		  fodselsAar: 2020,
+		  ...
+		  ...
+		 },
+
+		{ navn: "NesteMann", 
+		  fodselsAar: 2023,
+		  ... 
+		  ...
+		 }
+		]	
+
+Det kan være en samling av hunder eller katter hvor det lagres følgende informasjon:
+
+-navn
+-fødselsår
+-mor
+-far
+-rase  
+
+
+Registrer informasjon om 5 ulike dyr, og bruk deretter en forløkke til å skrive ut følgende:
+
+a) Navn på alle dyrene, og når de ble født -> "Milli Vanilli ble født 2020"
+b) Navn på alle dyrene og hva foreldrene heter -> "RatKillah sin mor heter Rattatoui, og faren heter El Chapo"
+c) Navn på alle dyrene, og alderen i år -> "Milli Vanilli er nå x år".
+
+--------------
+Oppgave 2
+
+Lag en oversikt over familien Duck i et array. Hvert av familiemedlemmene (Donald, Ole, Dole, Doffen) skal registreres med 
+fornavn:
+etternavn:
+adresse:
+poststed:
+telefon: (2 numre) -> 	{ privat: ...,
+			  jobb: ...
+			}
+
+epost: (2 adresser) ->  { privat: donald@duck.no,
+			  jobb: donald@andeby.no
+			}
+
+
+På denne måten kan vi registrere flere nummere (jobb og privat) for hver person.
+
+Bruk for-løkke til å skrive ut følgende:
+
+a) Fullstendig liste over alle personene, med all info
+
+b) Skriv ut fornavnet på alle, samt den private eposten -> "Epost-adressen til Donald er donald@duck.no "
+
+c) Skriv ut en liste med fornavn, etternavn, og deres jobb telefonnummer.
+
+-------------
+Oppgave 3
+
+Finn deg et idrettslag (SK Brann?) og registrer informasjon om de 11 spillerne i A-stallen.
+Registrer fornavn, etternavn, draktnummer, plass på laget (back, keeper, ving, etc) i javascriptobjekter slik vi har gjort, og putt alt sammen inn i et array.
+
+a) Skriv ut navnet på alle spillere, deres draktnummer, og hbolken posisjon de spiller
+
+" Bård Finne har draktnumemr 11, og er angrepsspiller. Han er født i 1996"  
+
+b) Skriv ut navnet på alle angrepsspillerene (bruk if-setning i for-løkken)
+
+c) Utvid oppgaven til å skrive ut informasjonen i stylede "cards" slik vi har øvd på tidligere. Slik at det blir et "produkt-kort" med presentasjon av den enkelte spileren i hvert slikt kort.
+
+

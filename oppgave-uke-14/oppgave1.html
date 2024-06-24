@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 1</title>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    const output = document.getElementById("output");
+
+    const arr = [1, 2.3, -4, 5.7, -7.2, 13, 59];
+    const arrAlt = [1, 2, 4, 23, 7, 99];
+    
+    let highest = -Infinity;
+    const findHighestNumber = (arr) => {
+        if (arr.length === 0) {
+          output.innerHTML = "The array is empty";
+          return;
+        };
+      for(const num of arr){
+        if (num > highest) {
+          highest = num;
+        };
+      }
+      console.log(highest);
+      output.innerHTML = `The highest number is ${highest}`
+    }
+    // Koden kan gjenbrukes!
+    findHighestNumber(arr);
+    
+    
+    const arrSorted = arr.slice();
+    arrSorted.sort((a,b) => a-b);
+    // sorts in ascending order
+    const arrSortedReverse = arr.slice();
+    arrSortedReverse.sort((a,b) => b-a);
+    // sorts in descending order
+
+    arr.push(92);
+    const arrLength = arr.length;
+    console.log(arrLength);
+
+    console.log(arr);
+    arr.shift();
+    console.log(arr);
+    
+    console.log(Array.isArray(arr));
+    let notArray = 1;
+    console.log(Array.isArray(notArray));
+
+    // Lag et nytt array 'absoluttVerdier' som baserer seg på arr, og som omgjør alle verdier til absoluttverdiene (Altså ingen negative verdier. Absoluttverdi er avstanden fra 0, uavhengig fortegn, så -9 blir til 9 feks. (NB! her benyttes klassen Math sin innebyggede metode (funksjon) .abs() ) I tillegg må vi benytte .map funksjonen som vist i notatet, for å endre alle tall i arrayet, hver for seg
+
+    const absoluttVerdier = arr.map(Math.abs);
+    // kort og lett!
+    console.log(arr);
+    console.log(absoluttVerdier);
+    </script>
+</body>
+</html>
+
+<!-- (Skriv gjerne ut resultatet av disse oppgavene til nettsiden (slik vi har pleid å gjøre det)
+
+
+ta utgangspunkt i arrayet 
+
+let arr = [1, 2.3, -4, 5.7, -7.2, 13, 59]
+
+a) Bruk en for of-løkke til å bla gjennom hele array'et, og finne den høyeste verdien. (if-setning inne i løkken ...)
+
+b) Bruk en av de innebyggede metodene i array-klassen til å sortere array'et i stigende rekkefølge. Lagre resultatet i en variabel med et annet navn, eks let arrSortert = .... 
+
+
+NB! Det er mer tricky å sortere tall enn en skulle tro. Se gjerne w3school sine sider om metoden sort() og den nyere toSorted()
+
+https://www.w3schools.com/jsref/jsref_sort.asp 
+
+c) bruk en av de innebyggede metodene i arrayklassen til å reversere array'et ... Igjen, lagre det endrede array'et i en ny variabel, eks let arrReversert = ...
+
+d) Legg til et element med verdien 92 til arrayet, ved å benytte en passende innebygget metode ...
+
+e) Finn den nye lengden på array'et 'arr' nå
+
+f) Fjern det første elementet i array'et. Dette kan gjøres på flere måter, eksempelvis shift, eller slice eller ...
+
+g) sjekk om arr faktisk er et array!TRICKY! (NB! Her benyttes klassen Array. for å benytte funksjonen vi er ute etter. Litt som når vi bruker Math. for å benytte de funksjonene det inneholder) 
+
+h) NØTT!
+Lag et nytt array 'absoluttVerdier' som baserer seg på arr, og som omgjør alle verdier til absoluttverdiene (Altså ingen negative verdier. Absoluttverdi er avstanden fra 0, uavhengig fortegn, så -9 blir til 9 feks. (NB! her benyttes klassen Math sin innebyggede metode (funksjon) .abs() )
+I tillegg må vi benytte .map funksjonen som vist i notatet, for å endre alle tall i arrayet, hver for seg-->
