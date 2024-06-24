@@ -1,0 +1,143 @@
+Oppgave 1
+
+Lag et array med 15 tilfeldige heltall: 
+
+ -> Dette gjøres ved å først lage en egen funksjon som lager et nytt random-tall og legger dette til et array (let heltall = []) ved å bruke
+push() metoden på arrayet. Dette må da naturlig nok gjentas 15 ganger (Tips: løkke)
+
+a) -Bruk så en forEach funksjon på dette fulle arrayet, til å skrive ut hvert element vha en NAVNGITT funksjon som innverdi til forEach (Tips: Husk at dette er en callback-funksjon, så bruk kun navnet på funksjonen, IKKE parantesene).
+
+eks arr.forEach( funksjoneMedNavn )
+
+function funksjonMedNavn() {
+	kode
+	}
+
+-------------------------
+
+b) Lag et annet array med 10 tilfeldige desimaltall (på samme måten som over)
+
+-Bruk en forEach funksjon på dette arrayet til å skrive ut hvert element vha en ANONYM funksjon lagret i en variabel, som innverdi til forEach 
+( eksempel let mittArr = () .... )
+
+--------------------------
+
+c) Lag et annet array med 10 kattenavn
+
+-Bruk en forEach funksjon på dette arrayet til å skrive ut hvert element vha en lokal funksjon definert inne i selve forEach
+
+(Eks forEach( function() ) 
+
+---------------------------
+
+d) Bruk samme arrayet fra oppgave c) og benytt map()-funksjonen i stedet for forEach(), sammen med lambda pilen =>  
+
+--------------------------------
+--------------------------------
+
+
+
+Oppgave 2
+
+
+Bruk arrayene fra oppgave 1 og bruk sorteringsfunksjonene sort() og den nye toSorted() og prøv å sortere arrays'ene i 
+
+a) stigende rekkefølge
+b) synkende rekkefølge
+
+Om en kun bruker sort() uten ytterligere informasjon (feks legger ved en => funksjon) så gjør sort-funksjonen verdiene om til tekststrenger før de blir sammenlignet. Det kan gi litt rare resultater ( eks: [1,1,11,2,222,3] )
+
+For å være sikker på å få de sortert slik vi ønsker, må vi legge ved en function ala
+
+(a, b) => a-b
+
+til forEach()
+
+Den sier : ta verdien i den ene indeksen (a) og sammenlign verdien i neste indeks (b) og om forskjellen er negativ, er b > a. Om forskjellen er positiv er a > b 
+
+ 
+--------------
+-------------
+
+Ekstra funksjonsoppgaver:
+
+----------------
+
+Ta utgangspunkt i følgende array:
+
+let duck = [
+        {
+            fornavn: "Ole",
+            etternavn: "Duck",
+            alder: 7,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313123,
+                jobb: 313223
+            }
+        },
+        {
+            fornavn: "Dole",
+            etternavn: "Duck",
+            alder: 7,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313124,
+                jobb: 313224
+            }
+        },
+        {
+            fornavn: "Doffen",
+            etternavn: "Duck",
+            alder: 7,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313125,
+                jobb: 313225
+            }
+        },
+{
+            fornavn: "Donald",
+            etternavn: "Duck",
+            alder: 66,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313126,
+                jobb: 313226
+            }
+        },
+        
+    ]
+
+
+a) Bruk .map() til å skrive ut
+ 
+Fornavn Etternavn
+gate
+postnr poststed 
+
+For hele familien i en div på siden
+
+b) Bruk .filter() til å bare skrive ut etternavnet til de som heter Duck
+
+c) Benytt .find() for å skrive ut navn og etternavn til en person som har fornavnet 'Ole'
+
+d) Benytt .every() for å sjekke om alle i listen har det samme familienavnet (etternavn == Duck)
+
+e) Benytt .some() for å se om noen (én eller flere) av endene er over 18 år (true/false ?)
