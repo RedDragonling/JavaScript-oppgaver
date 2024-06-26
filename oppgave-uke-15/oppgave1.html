@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 1</title>
+</head>
+<body>
+  <div id="output"></div>
+  <hr>
+  <div id="output-2"></div>
+  <hr>
+  <div id="output-3"></div>
+  <hr>
+  <div id="output-4"></div>
+
+  <script>
+    const output = document.getElementById("output");
+    const output2 = document.getElementById("output-2");
+    const output3 = document.getElementById("output-3");
+    const output4 = document.getElementById("output-4");
+
+    const randomNumber = (min, max) => {
+      return Math.round(Math.random() * (max - min) + min);
+    }
+    // Funksjon som generer et tilfeldig tall som er rundet til næreste heltall.
+
+    let randomNumArray = [];
+
+    for (let i = 0; i < 15; i++){
+      randomNumArray.push(randomNumber(1,100))
+    }
+    // Loop som legger til 15 tilfeldige tall mellom 1 og 100
+
+    console.log(randomNumArray);
+
+    randomNumArray.forEach(printArray);
+
+    function printArray(item) {
+      let newP = document.createElement("p");
+      newP.textContent = item;
+      output.appendChild(newP);
+    };
+
+    const randomDecimal = () => {
+      return (Math.round(Math.random() * 100) / 100).toFixed(2);
+    };
+    // Lager et desimaltall (mellom 0 og 1) og runder det opp til kunn 2 desimaler.
+
+    let decimalArray = [];
+
+    for (let i = 0; i < 10; i++){
+      decimalArray.push(randomDecimal());
+    }
+    
+    const printArrayAnon = (item) => {
+      let newP = document.createElement("p");
+      newP.textContent = item;
+      output2.appendChild(newP);
+    }
+    // anonym funksjon, må komme før funksjonen blir kallt på
+
+    decimalArray.forEach(printArrayAnon);
+
+    // 
+
+    const catArray = ["Milo","Pus","Pico","Tussi","Bamse","Mjau","Napoleon","Batman","Figaro","Pusur"];
+
+    catArray.forEach( (item) => {
+      let newP = document.createElement("p");
+      newP.textContent = item;
+      output3.appendChild(newP);
+    });
+    // forEach
+
+    catArray.map( (item) => {
+      let newP = document.createElement("p");
+      newP.textContent = item;
+      output4.appendChild(newP);
+    })
+    // Identisk bare map istedet lol
+  </script>
+</body>
+</html>
+<!-- 
+Lag et array med 15 tilfeldige heltall: 
+
+ -> Dette gjøres ved å først lage en egen funksjon som lager et nytt random-tall og legger dette til et array (let heltall = []) ved å bruke
+push() metoden på arrayet. Dette må da naturlig nok gjentas 15 ganger (Tips: løkke)
+
+a) -Bruk så en forEach funksjon på dette fulle arrayet, til å skrive ut hvert element vha en NAVNGITT funksjon som innverdi til forEach (Tips: Husk at dette er en callback-funksjon, så bruk kun navnet på funksjonen, IKKE parantesene).
+
+eks arr.forEach( funksjoneMedNavn )
+
+function funksjonMedNavn() {
+	kode
+	}
+
+-------------------------
+
+b) Lag et annet array med 10 tilfeldige desimaltall (på samme måten som over)
+
+-Bruk en forEach funksjon på dette arrayet til å skrive ut hvert element vha en ANONYM funksjon lagret i en variabel, som innverdi til forEach 
+( eksempel let mittArr = () .... )
+
+--------------------------
+
+c) Lag et annet array med 10 kattenavn
+
+-Bruk en forEach funksjon på dette arrayet til å skrive ut hvert element vha en lokal funksjon definert inne i selve forEach
+
+(Eks forEach( function() ) 
+
+---------------------------
+
+d) Bruk samme arrayet fra oppgave c) og benytt map()-funksjonen i stedet for forEach(), sammen med lambda pilen =>  
+ -->
