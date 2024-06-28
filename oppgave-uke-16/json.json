@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "fornavn": "Donald",
+    "etternavn": "Duck",
+    "addresse": {
+      "gate": "Andeby Villa",
+      "nummer": 13,
+      "poststed": "Andeby",
+      "addresse": 1313
+    }
+  }
+]
