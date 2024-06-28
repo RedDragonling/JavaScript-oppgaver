@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 3</title>
+</head>
+<body>
+  <h3>Tips per dag</h3>
+  <div id="output-tips"></div>
+  <hr>
+  <h3>Diverse</h3>
+  <div id="output-totals"></div>
+  <script>
+    const outputTips = document.getElementById("output-tips");
+    const outputTotals = document.getElementById("output-totals");
+
+    function fetchTekst(){
+      fetch("Daglige_steg.txt")
+        .then((res) => res.text())
+        .then((data) => {
+          const numArray = data.split(", ").map(Number);
+          // Konverterer txt filen sin string om til en array, og konverterer string til Number
+          console.log(numArray);
+          let date = 1;
+          numArray.forEach(element => {
+            const newP = document.createElement("p");
+            newP.textContent = `${date}. Januar: ${element} kr`;
+            date ++;
+            outputTips.appendChild(newP);
+          });
+          let totalSum = 0;
+          numArray.forEach(element => {
+            totalSum += element;
+          })
+          const newTotalSumHTML = document.createElement("h3");
+          newTotalSumHTML.textContent = `Totalsummen for Januar: ${totalSum} kr`;
+          outputTotals.appendChild(newTotalSumHTML);
+
+          let averageTip = (Math.round((totalSum / 31) * 100) / 100).toFixed(2);
+          // Runder averagen til kunn 2 desimaler.
+          const newAverageHTML = document.createElement("h3");
+          newAverageHTML.textContent = `Gjennomsnittet for måneden er ${averageTip} kr`;
+          outputTotals.appendChild(newAverageHTML);
+        });
+    };
+
+    window.onload = fetchTekst;
+  </script>
+</body>
+</html>
+<!-- Du jobber som servitør og har fått masse tips de siste 30 dagene. Du har registrert alle tipsene i en tekstfil som du har kalt "Daglige_steg.txt" og satser på det er nok til å lure skattemyndighetene om de skulle komme og snoke!
+
+Filen er på formatet 
+
+123, 345, 23, 567, 123, 345, 3, 122, .....
+
+Altså et tall for hver dag i 31 dager.
+
+Du skal lage denne filen og legge til et beløp for hver dag, med komma som skilletegn. (ofte kalt CSV eller Comma Separated Values)
+
+a) Bruk fetch() til å lese inn innholdet av filen, og skriv det ut på nettsiden. Fyll gjerne på med ledetekst ala "1 januar: <kroner> kr..."
+
+b) les inn teksten slik som i oppgave a), men i stedet for på bare skrive den ut på siden, ønsker du å regne litt verdier først.
+
+-Del opp teksten i enkelttall for hver dag, og legg hvert av disse tallene på plass i en array som du oppretter. (Tips: skilletegnet mellom alle tallene i teksten skal være et komma),
+-Når arrayet er fyllt med tall, kan du beregne totalsummen og skrive det ut til siden med passende ledetekst, samt gjennomsnittet for alle dagene. -->

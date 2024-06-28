@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 4</title>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    const output = document.getElementById("output");
+    function catLoad() {
+      fetch("dyr.json")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          output.innerHTML += `<h3>Cats in my life</h3>`
+          data.forEach((ani) => {
+            output.innerHTML += 
+            `<ul>
+              <li>Name: ${ani.name}</li>
+              <li>Gender: ${ani.gender}</li>
+              <li>Color: ${ani.color}</li>
+            </ul>`
+          })
+        })
+    };
+    window.onload = catLoad;
+  </script>
+</body>
+</html>
+<!-- Lag deg en enkel JSON-fil, og legg inn informasjon om 5 personer, eller dyr, eller ting du interesserer deg for. Legg til minst 3 nøkkel-verdi par for hver post (fornavn, etternavn, rase, hårfarge, e.l. )
+
+Sjekk at JSON-filen er på godkjent format, enten ved å copy/paste den inn i ChatGPT, eller ved å prøve en online JSON-kode validator.
+
+Lag så en nettside der brukeren kan trykke på en knapp, og få lastet inn data fra JSON-filen på siden. -->

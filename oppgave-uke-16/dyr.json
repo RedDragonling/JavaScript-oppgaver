@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Pico",
+    "gender": "female",
+    "color": "dilute torbie"
+  },
+  {
+    "id": 2,
+    "name": "Mjau",
+    "gender": "female",
+    "color": "brown tabby with white stomach"
+  },
+  {
+    "id": 3,
+    "name": "Kompis",
+    "gender": "male",
+    "color": "black with white chest"
+  }
+]
