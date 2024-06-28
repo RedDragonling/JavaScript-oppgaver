@@ -6,7 +6,31 @@
   <title>Oppgave 3</title>
 </head>
 <body>
+  <div id="output"></div>
   <script>
+    const output = document.getElementById("output");
+    const gangetabellen = (x,y) => {
+      const newTable = document.createElement("table");
+      let num1, num2, sum;
+      for(num1 = x; num1 <= y; num1++){
+        const newTr = document.createElement("tr");
+        for(num2 = x; num2 <= y; num2++){
+          if (num1 == num2){
+            const newTd = document.createElement("td");
+            newTd.textContent = `***`;
+            newTr.appendChild(newTd);  
+          } else {
+            const newTd = document.createElement("td");
+            newTd.textContent = num1 * num2;
+            newTr.appendChild(newTd);
+          }
+        };
+        newTable.appendChild(newTr);
+      };
+      output.appendChild(newTable);
+    };
+
+    gangetabellen(1, 10);
   </script>
 </body>
 </html>

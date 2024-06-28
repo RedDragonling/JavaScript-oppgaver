@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppgave 3</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <hr>
+    <div id="output-2"></div>
+    <script>
+      const output1 = document.getElementById("output");
+      const output2 = document.getElementById("output-2");
+      let duck = [
+        {
+          fornavn: "Ole",
+          etternavn: "Duck",
+          alder: 7,
+          adresse: {
+            gate: "Andeby terasse 3",
+            postnr: 313,
+            poststed: "Andeby",
+          },
+          telefonnummer: {
+            privat: 313123,
+            jobb: 313223,
+          },
+        },
+        {
+          fornavn: "Dole",
+          etternavn: "Duck",
+          alder: 7,
+          adresse: {
+            gate: "Andeby terasse 3",
+            postnr: 313,
+            poststed: "Andeby",
+          },
+          telefonnummer: {
+            privat: 313124,
+            jobb: 313224,
+          },
+        },
+        {
+          fornavn: "Doffen",
+          etternavn: "Duck",
+          alder: 7,
+          adresse: {
+            gate: "Andeby terasse 3",
+            postnr: 313,
+            poststed: "Andeby",
+          },
+          telefonnummer: {
+            privat: 313125,
+            jobb: 313225,
+          },
+        },
+        {
+          fornavn: "Donald",
+          etternavn: "Duck",
+          alder: 66,
+          adresse: {
+            gate: "Andeby terasse 3",
+            postnr: 313,
+            poststed: "Andeby",
+          },
+          telefonnummer: {
+            privat: 313126,
+            jobb: 313226,
+          },
+        },
+        {
+          fornavn: "Onkel Skrue",
+          etternavn: "McDuck",
+          alder: 109,
+          adresse: {
+            gate: "Pengebingen",
+            postnr: 313,
+            poststed: "Andeby",
+          },
+          telefonnummer: {
+            privat: 694200,
+            jobb: 101010,
+          },
+        },
+      ];
+
+
+    </script>
+  </body>
+</html>
+
+<!-- Ta utgangspunkt i følgende array:
+
+let duck = [
+        {
+            fornavn: "Ole",
+            etternavn: "Duck",
+            alder: 7,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313123,
+                jobb: 313223
+            }
+        },
+        {
+            fornavn: "Dole",
+            etternavn: "Duck",
+            alder: 7,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313124,
+                jobb: 313224
+            }
+        },
+        {
+            fornavn: "Doffen",
+            etternavn: "Duck",
+            alder: 7,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313125,
+                jobb: 313225
+            }
+        },
+{
+            fornavn: "Donald",
+            etternavn: "Duck",
+            alder: 66,
+            adresse: {
+                gate: "Andeby terasse 3",
+                postnr: 313,
+                poststed: "Andeby"
+            },
+            telefonnummer: {
+                privat: 313126,
+                jobb: 313226
+            }
+        },
+        
+    ]
+
+
+a) Bruk .map() til å skrive ut
+ 
+Fornavn Etternavn
+gate
+postnr poststed 
+
+For hele familien i en div på siden
+
+b) Bruk .filter() til å bare skrive ut etternavnet til de som heter Duck
+
+c) Benytt .find() for å skrive ut navn og etternavn til en person som har fornavnet 'Ole'
+
+d) Benytt .every() for å sjekke om alle i listen har det samme familienavnet (etternavn == Duck)
+
+e) Benytt .some() for å se om noen (én eller flere) av endene er over 18 år (true/false ?) -->

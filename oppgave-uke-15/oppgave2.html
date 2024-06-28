@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Oppgave 2</title>
 </head>
 <body>
   <div id="output"><h1>Unsorted random numbers</h1></div>
@@ -35,31 +35,18 @@
       decimalArray.push(randomDecimal());
     };
     // Array 2
-    // DETTE ER IKKE OPTIMALT MEN VIL BARE AT DET SKAL FUNKE LOL
-    const printArray1 = (item) => {
+
+const printArray = output => item => {
       let newP = document.createElement("p");
       newP.textContent = item;
       output.appendChild(newP);
     };
-    const printArray2 = (item) => {
-      let newP = document.createElement("p");
-      newP.textContent = item;
-      output2.appendChild(newP);
-    };
-    const printArray3 = (item) => {
-      let newP = document.createElement("p");
-      newP.textContent = item;
-      output3.appendChild(newP);
-    };
-    const printArray4 = (item) => {
-      let newP = document.createElement("p");
-      newP.textContent = item;
-      output4.appendChild(newP);
-    };
-// Rip
+    // (output, item =>) funker ikke. (output => item =>) funker.
+    // Funksjonen må calles 2 ganger for å funke. Første gang lager han print array der man gir item, andre gang gjør den funksjonen. Higher order function.
+    // Basically, hvis jeg ikke gjør dette får jeg en undefined.
 
-randomNumArray.forEach(printArray1);
-decimalArray.forEach(printArray3);
+randomNumArray.forEach(printArray(output));
+decimalArray.forEach(printArray(output3));
 
 const randomNumSorted = randomNumArray.sort((a, b) => a-b);
 //Ascending/Teller fra lavest til høyest verdi.
@@ -67,8 +54,8 @@ const randomNumSorted = randomNumArray.sort((a, b) => a-b);
 const decimalNumSorted = decimalArray.sort((a, b) => b-a);
 // Descending/Teller fra høyest til lavest verdi.
     
-randomNumSorted.forEach(printArray2);
-decimalNumSorted.forEach(printArray4);
+randomNumSorted.forEach(printArray(output2));
+decimalNumSorted.forEach(printArray(output4));
   </script>
 </body>
 </html>
