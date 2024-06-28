@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="button">Les tekstfil</button>
+  <div id="output"></div>
+  <script>
+    const output = document.getElementById("output");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", readTextFile);
+
+    function readTextFile() {
+      fetch('tekstfil.txt')
+        .then((res) => res.text())
+        .then((data) => {
+          console.log(data);
+          output.innerHTML += `<h2><br>Her er innholdet i tekstfilen:<br></h2> ${data}`;
+        });
+    };
+
+    // Replikerte koden i eksempelet til forelesningen
+  </script>
+</body>
+</html>
