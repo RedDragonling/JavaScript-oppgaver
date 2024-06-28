@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 1</title>
+</head>
+<body>
+  <label for="fnavn">Fornavn</label>
+  <input type="text" id="fnavn">
+  <label for="enavn">Etternavn</label>
+  <input type="text" id="enavn">
+  <button id="button">Registrer deg</button>
+  <div id="output"></div>
+  <script>
+    
+    const output = document.getElementById("output");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", () => {
+      let fnavn = document.getElementById("fnavn").value;
+      let enavn = document.getElementById("enavn").value;
+
+      localStorage.setItem("fornavn", fnavn);
+      localStorage.setItem("etternavn", enavn);
+
+      output.innerHTML = `Du er nå registrert! Velkommen til oss ${fnavn} ${enavn}!`
+    });
+
+    function login() {
+      let fnavn = localStorage.getItem("fornavn");
+      let enavn = localStorage.getItem("etternavn");
+      if( fnavn === null && enavn === null){
+        output.innerHTML = "Velkommen til nettsiden!"
+      } else {
+        output.innerHTML = `Velkommen tilbake ${fnavn} ${enavn}!`
+      };
+    };
+    
+    window.onload = login();
+  </script>
+</body>
+</html>
+<!-- Lag en side med <input>-felter for fornavn og etternavn. Og en knapp der brukeren kan klikke på for å skrive inn (endre) navnet sitt.
+
+bruk local.storage til å lagre fornavn og etternavn til brukeren. 
+
+Dersom det allerede er lagret data i local.storage skal det stå 
+
+	"Velkommen tilbake til oss, <fornavn> <etternavn>!" 
+
+når brukeren åpner siden, eller 
+
+	"Hyggelig å se nye brukere her! Velkommen til oss!"
+
+dersom det IKKE er registrert noe i local.storage fra før -->
