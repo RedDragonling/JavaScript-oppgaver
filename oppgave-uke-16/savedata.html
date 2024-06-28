@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="fnavn">Fornavn</label>
+  <input type="text" id="fnavn">
+  <label for="enavn">Etternavn</label>
+  <input type="text" id="enavn">
+  <button id="save-name">Lagre navn i cookies</button>
+  <button id="get-name">Hent ut navn av cookies</button>
+
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById("output");
+    const buttonSaveName = document.getElementById("save-name");
+    const buttonGetName = document.getElementById("get-name");
+    
+
+    function saveNameToLocalStorage() {
+      let fnavn = document.getElementById("fnavn").value;
+      let enavn = document.getElementById("enavn").value;
+
+      localStorage.setItem("fornavn", fnavn);
+      localStorage.setItem("etternavn", enavn);
+    };
+
+    function getNameFromLocalStorage() {
+      let fnavn = localStorage.getItem("fornavn");
+      let enavn = localStorage.getItem("etternavn");
+      if (fnavn === null) {
+        fnavn = "ikke registrert";
+      };
+      
+      if (enavn === null) {
+        enavn = "ikke registrert";
+      };
+      output.innerHTML = `${fnavn} ${enavn}`;
+    };
+
+    buttonSaveName.addEventListener("click", saveNameToLocalStorage);
+    buttonGetName.addEventListener("click", getNameFromLocalStorage);
+
+    // replikerte koden til eksempelet i forelesningen sånn at jeg har den på hånd
+  </script>
+</body>
+</html>
