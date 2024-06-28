@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 2</title>
+</head>
+<body>
+  <h2>Hei her er en tittel</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit necessitatibus soluta et ad non assumenda suscipit, error enim sapiente quasi accusamus accusantium obcaecati voluptatem praesentium reiciendis saepe, ullam dolorem alias.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam dolorum quisquam eveniet corporis ullam explicabo facilis nihil error, ex possimus neque, temporibus, consectetur ducimus. Quae illum molestias fugiat qui quam.</p>
+
+  <select name="color-select" id="color-select">
+    <option value="">--Velg en farge!--</option>
+    <option value="ff8686">Rød</option>
+    <option value="86caff">Blå</option>
+    <option value="fff886">Gul</option>
+    <option value="acff86">Grønn</option>
+  </select>
+  <script>
+    window.onload = oppstart;
+
+    const select = document.getElementById("color-select");
+    const body = document.querySelector("body");
+    select.addEventListener("change", ()=> {
+      if(select.value === "")
+      {} else {
+        let color = "#" + select.value;
+        body.style.backgroundColor = color;
+        localStorage.setItem("color", color);
+      }
+    })
+
+    function oppstart(){
+      let color = localStorage.getItem("color");
+      if(color === null){
+        color = "ikke registrert";
+      }
+      body.style.backgroundColor = color;
+    };
+  </script>
+</body>
+</html>
+<!-- Lag en enkel nettside med en <h2>-overskrift og noe dummy-tekst. 
+
+Legg til en nedtrekksmeny hvor brukeren kan velge en farge blant rød, gul, blå, grønn. Denne fargen skal sette (style) fargen på bakgrunnen av siden, og verdien skal lagres i local.storage til neste gang brukeren laster siden. 
+
+Tips: ved å benytte window.onload = oppstart; kan en automatisk umiddelbart få kjørt funksjonen oppstart() etter at nettleseren har lastet ferdig siden, og alle html-elementene er opprettet.
+
+Bruk dette i løsningen for å sjekke om det allerede finnes en registrert farge i local.storage. I så fall bruk den. -->

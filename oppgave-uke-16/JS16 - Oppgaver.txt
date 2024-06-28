@@ -1,0 +1,79 @@
+Oppgaver
+
+------------------------------
+NB! Tips til løsing av local.storage oppgavene:
+
+ved å benytte 
+
+	window.onload = oppstart(); 
+
+kan en automatisk få kjørt funksjonen oppstart() ETTER at nettleseren har lastet ferdig siden, og alle html-elementene er opprettet. Funksjonen kan hete hva som helst. Det viktige er at den ikke kjører før siden er klar. Inni denne funksjonen sjekker en da først om det ligger noen verdier lagret i local.storage som en skal benytte.
+
+----------------------------
+
+Oppgave 1:
+
+Lag en side med <input>-felter for fornavn og etternavn. Og en knapp der brukeren kan klikke på for å skrive inn (endre) navnet sitt.
+
+bruk local.storage til å lagre fornavn og etternavn til brukeren. 
+
+Dersom det allerede er lagret data i local.storage skal det stå 
+
+	"Velkommen tilbake til oss, <fornavn> <etternavn>!" 
+
+når brukeren åpner siden, eller 
+
+	"Hyggelig å se nye brukere her! Velkommen til oss!"
+
+dersom det IKKE er registrert noe i local.storage fra før
+
+
+------------------------------------------------------
+
+Oppgave 2:
+
+Lag en enkel nettside med en <h2>-overskrift og noe dummy-tekst. 
+
+Legg til en nedtrekksmeny hvor brukeren kan velge en farge blant rød, gul, blå, grønn. Denne fargen skal sette (style) fargen på bakgrunnen av siden, og verdien skal lagres i local.storage til neste gang brukeren laster siden. 
+
+Tips: ved å benytte window.onload = oppstart; kan en automatisk umiddelbart få kjørt funksjonen oppstart() etter at nettleseren har lastet ferdig siden, og alle html-elementene er opprettet.
+
+Bruk dette i løsningen for å sjekke om det allerede finnes en registrert farge i local.storage. I så fall bruk den.
+
+---------------------------------------------------
+
+Oppgave 3
+
+Du jobber som servitør og har fått masse tips de siste 30 dagene. Du har registrert alle tipsene i en tekstfil som du har kalt "Daglige_steg.txt" og satser på det er nok til å lure skattemyndighetene om de skulle komme og snoke!
+
+Filen er på formatet 
+
+123, 345, 23, 567, 123, 345, 3, 122, .....
+
+Altså et tall for hver dag i 31 dager.
+
+Du skal lage denne filen og legge til et beløp for hver dag, med komma som skilletegn. (ofte kalt CSV eller Comma Separated Values)
+
+a) Bruk fetch() til å lese inn innholdet av filen, og skriv det ut på nettsiden. Fyll gjerne på med ledetekst ala "1 januar: <kroner> kr..."
+
+b) les inn teksten slik som i oppgave a), men i stedet for på bare skrive den ut på siden, ønsker du å regne litt verdier først.
+
+-Del opp teksten i enkelttall for hver dag, og legg hvert av disse tallene på plass i en array som du oppretter. (Tips: skilletegnet mellom alle tallene i teksten skal være et komma),
+-Når arrayet er fyllt med tall, kan du beregne totalsummen og skrive det ut til siden med passende ledetekst, samt gjennomsnittet for alle dagene.
+
+---------------------------------------------------------------------------------
+
+Oppgave 4 - JSON
+
+Lag deg en enkel JSON-fil, og legg inn informasjon om 5 personer, eller dyr, eller ting du interesserer deg for. Legg til minst 3 nøkkel-verdi par for hver post (fornavn, etternavn, rase, hårfarge, e.l. )
+
+Sjekk at JSON-filen er på godkjent format, enten ved å copy/paste den inn i ChatGPT, eller ved å prøve en online JSON-kode validator.
+
+Lag så en nettside der brukeren kan trykke på en knapp, og få lastet inn data fra JSON-filen på siden.
+
+---------------------------------------------------------------------------------
+
+
+
+
+   

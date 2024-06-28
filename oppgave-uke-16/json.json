@@ -9,5 +9,16 @@
       "poststed": "Andeby",
       "addresse": 1313
     }
+  },
+  {
+    "id": 2,
+    "fornavn": "Dolan",
+    "etternavn": "Duk",
+    "addresse": {
+      "gate": "Andeby Bygg",
+      "nummer": 31,
+      "poststed": "Andeby",
+      "addresse": 3113
+    }
   }
 ]
