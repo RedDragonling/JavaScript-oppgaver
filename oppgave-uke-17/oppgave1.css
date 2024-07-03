@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100px;
+}
+
+#output {
+  display: flex;
+  div {
+    margin: 1em;
+    padding: 1em 2em;
+    border: 1px solid black;
+    text-align: center;
+  }
+}

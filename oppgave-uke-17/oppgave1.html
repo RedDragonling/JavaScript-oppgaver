@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppgave 1</title>
+  <link rel="stylesheet" href="oppgave1.css">
+</head>
+<body>
+
+  <div id="output"></div>
+  <script>
+    const output = document.getElementById("output");
+    function getCountries() {
+      fetch("land.json")
+        .then((res) => res.json())
+        .then((data) => {
+          data.forEach(element => {
+            let newHeader = document.createElement("h1");
+            let newImg = document.createElement("img")
+            let newDiv = document.createElement("div");
+            let newP1 = document.createElement("p");
+            let newP2 = document.createElement("p");
+            newHeader.textContent = element.name;
+            newImg.src = element.flag;
+            newP1.textContent = element.capital;
+            newP2.textContent = element.population;
+            newDiv.appendChild(newHeader);
+            newDiv.appendChild(newImg);
+            newDiv.appendChild(newP1);
+            newDiv.appendChild(newP2);
+            output.appendChild(newDiv);
+          });
+
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+    // window.onload = getCountries;
+    // 
+    async function getCountriesAlt() {
+      const response = await fetch("land.json");
+      const countries = await response.json();
+      console.log(countries)
+      countries.forEach( e => {
+        let newHeader = document.createElement("h1");
+        let newImg = document.createElement("img")
+        let newDiv = document.createElement("div");
+        let newP1 = document.createElement("p");
+        let newP2 = document.createElement("p");
+        newHeader.textContent = e.name;
+        newImg.src = e.flag;
+        newP1.textContent = e.capital;
+        newP2.textContent = e.population;
+        newDiv.appendChild(newHeader);
+        newDiv.appendChild(newImg);
+        newDiv.appendChild(newP1);
+        newDiv.appendChild(newP2);
+        output.appendChild(newDiv);
+      });
+      return countries;
+    };
+
+    // console.log(getCountriesAlt())
+
+    // await getCountriesAlt;
+    window.onload = getCountriesAlt;
+    // dette var PAIN.
+
+  </script>
+</body>
+</html>
+<!-- Lag en JSON fil (land.json) og fyll den med info over 5 ulike land. Legg til 
+
+navn, 
+link til et flagg (bilde), 
+navn på hovedstad, 
+og befolkningstall
+
+for hvert enkelt land.
+
+a) Last JSON-filen ved å benytte fetch() sammen med .then(), og skriv ut innholdet på en nettside. Style gjerne nettsiden litt med CSS også 
+
+b) Last JSON-filen ved å benytte fetch() og Async and Await, og skriv ut innholdet på en nettside -->

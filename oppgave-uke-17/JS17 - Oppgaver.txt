@@ -1,0 +1,73 @@
+Oppgave 1
+
+Lag en JSON fil (land.json) og fyll den med info over 5 ulike land. Legg til 
+
+navn, 
+link til et flagg (bilde), 
+navn på hovedstad, 
+og befolkningstall
+
+for hvert enkelt land.
+
+a) Last JSON-filen ved å benytte fetch() sammen med .then(), og skriv ut innholdet på en nettside. Style gjerne nettsiden litt med CSS også 
+
+b) Last JSON-filen ved å benytte fetch() og Async and Await, og skriv ut innholdet på en nettside
+
+
+Oppgave 2
+
+I stedet for å åpne en fil som tidligere, ønsker vi nå å benytte en ferdiglaget API fra en server et sted. Bruk linken 
+
+	https://jsonplaceholder.typicode.com/comments/
+
+for å hente ned et array med ulike kommentarer. Hver av kommentarene er på formen du ser under: 
+
+------------------------------------
+	{
+    "postId": 1,
+    "id": 1,
+    "name": "id labore ex et quam laborum",
+    "email": "Eliseo@gardner.biz",
+    "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+  }
+
+-----------------------------------
+
+ I stedet for navnet på en fil, bruker vi linken. Altså fetch('https://jsonplaceholder.typicode.com/comments/') 
+
+
+a) Bruk fetch() og .then(), og presenter innholdet (JSON) du laster ned via linken på nettsiden.
+
+b) Bruk fetch() og Async and Await for å hente ned og presentere JSON fra linken
+
+Siden vi får et array med data (en samling) tilbake, er det naturlig å bruke en løkke for å bla gjennom alle objektene 
+( .map() eller .forEach() eller tradisjonell for-løkke).
+-----------------------
+
+Oppgave 3
+
+Du har et array med strømpriser let strom = [1.3 , 2.3, 9.0 , ...... ]
+En spotpris for hver dag i en måned med 31 dager. Fyll inn de resterende dagene selv. Husk punktum som desimaltall
+
+- Bruk så reduce-metoden for å summere prisene for hele måneden. Deretter kan du dele på antallet dager den måneden og presentere den gjennomsnittelige prisen den måneden
+
+- Bruk filter-metoden for å kun plukke ut prisene over 2 kr
+
+- Bruk toSorted for å sortere tallene i stigende rekkefølge
+
+Prøv så å utforme en nettside der du skriver ut informasjonen med forklarende tekst til:
+
+Noe sånt som:
+
+
+Snittprisen for strøm den inneværende mnd var: xx.xx kroner
+
+Strømprisen var over 2kr xx antall dager denne måneden
+
+Strømprisene i stigende rekkefølge:
+
+------------------------------------------
+
+------------------------------------------
+
+ 

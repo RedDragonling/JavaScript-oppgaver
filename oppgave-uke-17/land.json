@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Norway",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+    "capital": "Oslo",
+    "population": 5457000
+  },
+  {
+    "id": 2,
+    "name": "Sweden",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg",
+    "capital": "Stockholm",
+    "population": 10551707
+  },
+  {
+    "id": 3,
+    "name": "Denmark",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
+    "capital": "Copenhagen",
+    "population": 5827463
+  },
+  {
+    "id": 4,
+    "name": "Finland",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg",
+    "capital": "Helsinki",
+    "population": 5608218
+  },
+  {
+    "id": 5,
+    "name": "Iceland",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
+    "capital": "Reykjavik",
+    "population": 338349
+  }
+]
