@@ -1,0 +1,25 @@
+Flere oppgaver med fetch() og Async & Await
+
+Prøv å dele oppgaveløsningen inn i ulike funksjoner, som hver har som oppgave å gjøre én (eller ferrest mulig) oppgaver. Gjerne en main() funksjon som setter igang andre funksjoner. En funksjon for å hente ned JSON-data via et api, og en egen funksjon for å skrive ut et pent formatert resultat til skjerm.
+
+Vi skal benytte litt flere ulike API'er for å øve litt mer
+
+Oppgave 1 - 15
+
+Besøk siden 
+
+apipheny.io/free-api/
+
+og lag en presentasjonsside for noen av de ulike API'ene som tilbys der
+
+----------------------------------------
+
+Se litt ekstra på de API'ene (URL'ene) som har ekstra informasjon i enden av linken. Som feks 6. https://api.genderize.io/?name=luc
+Da legges det ved ekstra informasjon om feltet 'navn' for å filtrere og få svar tilbake om kun dette navnet. Lag da gjerne en nettside der brukeren kan skrive inn et navn i et tekstfelt, tilpass url'en med å inkludere navnet i api-kallet, slik at en får info om det navnet brukeren har skrevet inn.
+
+Eksempelvis
+
+https://api.genderize.io/?name=Tom 
+
+Der en da kun ber om info om en person med nvnet Tom
+
